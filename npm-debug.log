@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/opt/lampp/htdocs/togo/testProject',
+6 verbose install   [ 'sails',
+6 verbose install     'sails-disk',
+6 verbose install     'rc',
+6 verbose install     'include-all',
+6 verbose install     'ejs',
+6 verbose install     'grunt',
+6 verbose install     'grunt-sync',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-sails-linker',
+6 verbose install     'grunt-contrib-jst',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-less',
+6 verbose install     'grunt-contrib-coffee',
+6 verbose install     'node-asterisk' ] ]
+7 info preinstall testProject@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping rc@~0.5.0 /opt/lampp/htdocs/togo/testProject
+10 verbose already installed skipping include-all@~0.1.3 /opt/lampp/htdocs/togo/testProject
+11 verbose already installed skipping ejs@~0.8.4 /opt/lampp/htdocs/togo/testProject
+12 verbose already installed skipping grunt@0.4.2 /opt/lampp/htdocs/togo/testProject
+13 verbose already installed skipping grunt-sync@~0.0.4 /opt/lampp/htdocs/togo/testProject
+14 verbose already installed skipping grunt-contrib-copy@~0.5.0 /opt/lampp/htdocs/togo/testProject
+15 verbose already installed skipping grunt-contrib-clean@~0.5.0 /opt/lampp/htdocs/togo/testProject
+16 verbose already installed skipping grunt-contrib-concat@~0.3.0 /opt/lampp/htdocs/togo/testProject
+17 verbose already installed skipping grunt-sails-linker@~0.9.5 /opt/lampp/htdocs/togo/testProject
+18 verbose already installed skipping grunt-contrib-jst@~0.6.0 /opt/lampp/htdocs/togo/testProject
+19 verbose already installed skipping grunt-contrib-watch@~0.5.3 /opt/lampp/htdocs/togo/testProject
+20 verbose already installed skipping grunt-contrib-uglify@~0.4.0 /opt/lampp/htdocs/togo/testProject
+21 verbose already installed skipping grunt-contrib-cssmin@~0.9.0 /opt/lampp/htdocs/togo/testProject
+22 verbose already installed skipping grunt-contrib-less@0.11.1 /opt/lampp/htdocs/togo/testProject
+23 verbose already installed skipping grunt-contrib-coffee@~0.10.1 /opt/lampp/htdocs/togo/testProject
+24 verbose cache add [ 'node-asterisk@https://github.com/mscdex/node-asterisk.git',
+24 verbose cache add   null ]
+25 verbose cache add name=undefined spec="node-asterisk@https://github.com/mscdex/node-asterisk.git" args=["node-asterisk@https://github.com/mscdex/node-asterisk.git",null]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'node-asterisk@https://github.com/mscdex/node-asterisk.git',
+26 verbose parsed url   path: 'node-asterisk@https://github.com/mscdex/node-asterisk.git',
+26 verbose parsed url   href: 'node-asterisk@https://github.com/mscdex/node-asterisk.git' }
+27 verbose already installed skipping sails@~0.11.0 /opt/lampp/htdocs/togo/testProject
+28 verbose already installed skipping sails-disk@~0.10.0 /opt/lampp/htdocs/togo/testProject
+29 verbose cache add name="node-asterisk" spec="https://github.com/mscdex/node-asterisk.git" args=["node-asterisk","https://github.com/mscdex/node-asterisk.git"]
+30 verbose parsed url { protocol: 'https:',
+30 verbose parsed url   slashes: true,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: 'github.com',
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: 'github.com',
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '/mscdex/node-asterisk.git',
+30 verbose parsed url   path: '/mscdex/node-asterisk.git',
+30 verbose parsed url   href: 'https://github.com/mscdex/node-asterisk.git' }
+31 silly lockFile 33e0ae27-hub-com-mscdex-node-asterisk-git https://github.com/mscdex/node-asterisk.git
+32 verbose lock https://github.com/mscdex/node-asterisk.git /root/.npm/33e0ae27-hub-com-mscdex-node-asterisk-git.lock
+33 verbose addRemoteTarball [ 'https://github.com/mscdex/node-asterisk.git', null ]
+34 info retry fetch attempt 1 at 18:51:01
+35 verbose fetch to= /tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git
+36 http GET https://github.com/mscdex/node-asterisk.git
+37 http 200 https://github.com/mscdex/node-asterisk.git
+38 verbose tar unpack /tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git
+39 silly lockFile f84b8ae4--mscdex-node-asterisk-git-unpack tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git-unpack
+40 verbose lock tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git-unpack /root/.npm/f84b8ae4--mscdex-node-asterisk-git-unpack.lock
+41 silly lockFile 72e8b92d-hub-com-mscdex-node-asterisk-git tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git
+42 verbose lock tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git /root/.npm/72e8b92d-hub-com-mscdex-node-asterisk-git.lock
+43 silly gunzTarPerm modes [ '755', '644' ]
+44 error not a package /tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git
+45 silly lockFile f84b8ae4--mscdex-node-asterisk-git-unpack tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git-unpack
+46 silly lockFile f84b8ae4--mscdex-node-asterisk-git-unpack tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git-unpack
+47 silly lockFile 72e8b92d-hub-com-mscdex-node-asterisk-git tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git
+48 silly lockFile 72e8b92d-hub-com-mscdex-node-asterisk-git tar:///tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git
+49 silly lockFile 33e0ae27-hub-com-mscdex-node-asterisk-git https://github.com/mscdex/node-asterisk.git
+50 silly lockFile 33e0ae27-hub-com-mscdex-node-asterisk-git https://github.com/mscdex/node-asterisk.git
+51 error Error: ENOENT, open '/tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git-unpack/package.json'
+52 error If you need help, you may report this *entire* log,
+52 error including the npm and node versions, at:
+52 error     <http://github.com/npm/npm/issues>
+53 error System Linux 3.16.0-30-generic
+54 error command "/usr/bin/node" "/usr/bin/npm" "install"
+55 error cwd /opt/lampp/htdocs/togo/testProject
+56 error node -v v0.10.33
+57 error npm -v 1.4.28
+58 error path /tmp/npm-18827-PsoavMr3/github.com/mscdex/node-asterisk.git-unpack/package.json
+59 error code ENOENT
+60 error errno 34
+61 verbose exit [ 34, true ]
