@@ -35,6 +35,14 @@ module.exports.routes = {
   '/': {
     view: 'homepage',
     controller: 'Index'
+  },
+
+  'socket': {
+    controller: 'Socket'
+  },
+
+  'call': {
+    controller: 'Call'
   }
 
   /***************************************************************************
