@@ -12,16 +12,16 @@
 module.exports.bootstrap = function(cb) {
 
 	var AsteriskManager = require('asterisk-manager'),
-        ami = new AsteriskManager('5038','177.16.201.9','admin','togonoob', true),
+        ami = new AsteriskManager('5038','200.135.233.35','admin','1234', true),
         peer_list = {};
 
     ami.keepConnected();
 
     ami
     .on('managerevent', function(evt) { //Colhe qualquer evento que acontecer no Asterisk.
-        //console.log('managerevent', evt);
+        // console.log('managerevent', evt);
     })
-    // quando vc conecta ou desconecta do asterisk
+    // é disparado quando algum usuário connecta no asterisk
     .on('extensionstatus', function(evt) {
         //dispara evento para o front
         sails.io.sockets.emit('asterisk connected', {

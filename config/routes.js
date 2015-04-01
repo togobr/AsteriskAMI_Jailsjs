@@ -43,6 +43,10 @@ module.exports.routes = {
 
   'call': {
     controller: 'Call'
+  },
+
+  'expert': {
+    controller: 'Expert'
   }
 
   /***************************************************************************
