@@ -1,0 +1,62 @@
+@misc{GOOGLE,
+title = {WebRTC},
+month = jun,
+year = {2012},
+note = {Internet: http://www.webrtc.org/reference/architecture}
+}
+
+
+@misc{JAVASCRIPT,
+title={JavaScript},
+month = jun,
+year={2014},
+note={Internet: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}
+}
+
+@misc{HTML5,
+title={html5},
+month = mar,
+year={2014},
+note={Internet: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Using\_HTML5\_audio\_and\_video}
+}
+
+@misc{DUTTOM,
+title={Getting Started with WebRTC},
+month = {fev},
+year={2014},
+note={Internet: http://www.html5rocks.com/en/tutorials/webrtc/basics/},
+}
+
+@misc{MELLO,
+title={Voz sobre IP - VOIP},
+month = nov,
+year={2011},
+note={Internet: http://tele.sj.ifsc.edu.br/\~ msobral/rmu/slides/aula-22.pdf},
+}
+
+@MASTERSTHESIS{Amaral:2013,
+AUTHOR =       "Amaral, V. M. F.",
+TITLE =        "Framework e Cliente WebRTC",
+SCHOOL =       "Escola de Engenharia, UM",
+YEAR =         "2013",
+type =         "Mestrado"
+}
+
+@MASTERSTHESIS{Borges:2013,
+address={Santa Catarina},
+author={Borges, F.},
+pages={56},
+school={Sistema de Telecomunicações, Instituto Federal de Santa Catarina SJ},
+title={WebRTC: Estudo e An\'alise do Projeto},
+type={Gradua{\c c}\~ao},
+year={2013}}
+
+@MASTERSTHESIS{Varanda:2008,
+address={Distrito Federal},
+author={Varanda, J. H. O.},
+pages={92},
+pagename={f.},
+school={Faculdade de Ciências da Computação, Universidade de Brasília},
+title={ICE: Uma solu{\c c}\~ao geral para travessia de NAT},
+type={Bacharelado},
+year={2008}}
