@@ -107,10 +107,12 @@ ul, ol {
 		.logo{
 			height: 139px;
 			display: block;
+			margin-bottom: 28px;
 		}
 
 		.usersDiv{
-			// overflow: auto;
+			height: 441px;
+			overflow: auto;
 
 			.user{
 				@include border-radius(15px);
@@ -128,6 +130,10 @@ ul, ol {
 					z-index: 1;
 					bottom: -10px;
 					right: 20px;
+				}
+
+				&:first-child ul{
+					margin-top: 0px;
 				}
 
 				ul{
@@ -176,6 +182,33 @@ ul, ol {
 						}
 					}
 				}		
+			}
+
+			.callStatus{
+				display: none;
+			}
+
+			&.inUse{
+				.callStatus{
+					position: absolute;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					background: #FFFFFF;
+					z-index: 10;
+					display: block;
+				}
+
+				.callStatus #btnHangUp{
+					@include border-radius(7px);
+					position: absolute;
+					height: 120px;
+					width: 120px;
+					left: 50%;
+					margin-left: -60px;
+					bottom: 50px;
+					background: #BE2833;
+				}
 			}
 		}		
 	}

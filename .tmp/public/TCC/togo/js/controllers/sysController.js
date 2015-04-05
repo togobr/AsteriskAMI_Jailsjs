@@ -38,7 +38,7 @@ $(function() {
                 var user_view = user_views[participant.exten];
                 if (!user_view) return;
 
-                user_view.data.ramalOcupado = (participant.status == 0);
+                user_view.data.ramalOnline = (participant.status == 0);
                 user_view.data.ramalEmUso = ((participant.status == 1) || (participant.status == 8));
                 user_view.render();
                 console.log('asterisk connected', user_view);
@@ -47,6 +47,7 @@ $(function() {
             .on('get peers', function(peers) {
                 console.log('Retorna os ramais registrados no sip.conf', peers);
                 // cada vez que alguem conectar, cada cliente vai disparar o evento `get peers` (rever isso)
+                
                 // para prevenir a duplicação de views
                 $('.usersDiv').html('');
 
@@ -63,6 +64,15 @@ $(function() {
 
                     $('.usersDiv').append(user_view.$el);
                 });
+
+                //insere na usersDiv um bloco que vai conter o status da ligação, e o botão de encerrar a ligação também.
+                $('.usersDiv').append(
+                    '<div class="callStatus">' +
+                        '<span id="timeCall"></span>' +
+                        '<input type="button" id="btnHangUp" class="btn btn-primary" value="HangUp" onclick="sipHangUp();"/>'+
+                    '</div>'
+                );
+                 
             })
             /*.on('show result', function(result) {
                 console.log('SHOWING RESULT:', result);

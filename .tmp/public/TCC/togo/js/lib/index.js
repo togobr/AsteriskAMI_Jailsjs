@@ -399,6 +399,13 @@
 
     // terminates the call (SIP BYE or CANCEL)
     function sipHangUp() {
+        //Togo
+        var $usersDiv = $('.usersDiv');
+        
+        $usersDiv.removeClass('inUse');
+        //Fim Togo
+        console.log('foo HUEEEEEEEEEEE', $usersDiv);
+
         if (oSipSessionCall) {
             txtCallStatus.innerHTML = '<i>Terminating the call...</i>';
             oSipSessionCall.hangup({events_listener: { events: '*', listener: onSipEventSession }});
@@ -727,14 +734,6 @@
                     if (e.session == oSipSessionRegister) {
                         uiOnConnectionEvent(bConnected, !bConnected);
                         txtRegStatus.innerHTML = "<i>" + e.description + "</i>";
-
-                        //togoInicio
-                        console.log('e.description', e.description);
-
-                        if(e.description == "Connected"){
-                           modal.css('display', 'none');
-                        }
-                        //togoFim
                     }
                     else if (e.session == oSipSessionCall) {
                         btnHangUp.value = 'HangUp';

@@ -25,7 +25,7 @@ var UserView = Backbone.View.extend({
         console.log("Rendering...");
         var data = $.extend(true, {}, this.peer, this.data);
 
-        console.log('fooo', data);
+        // console.log('fooo', data);
 
         var rendered = Mustache.to_html(this.template, data);
         this.$el.html(rendered);
@@ -34,7 +34,7 @@ var UserView = Backbone.View.extend({
     setPeer: function(peer) {
         this.peer = peer;
 
-        console.log('foo this.data', this.data);
+        // console.log('foo this.data', this.data);
         
         this.data.ramalOnline = peer.ipport != 0;
     },
@@ -45,7 +45,8 @@ var UserView = Backbone.View.extend({
             data = x.attr('data-ramal');
 
             sipCall("call-audiovideo"); //função do pŕoprio sipML5. js/lib/index.js
-            console.log('call-video: ', data);
+
+            this.callStatus($el);
     },
 
 
@@ -60,6 +61,8 @@ var UserView = Backbone.View.extend({
             $id_txtPhoneNumber.val(data);
 
             sipCall("call-audio"); //função do pŕoprio sipML5. js/lib/index.js
+
+            this.callStatus($el);
     },
 
     openChat: function() {
@@ -68,5 +71,15 @@ var UserView = Backbone.View.extend({
             data = x.attr('data-ramal');
 
         window.alert("Abrindo comunicação de CHAT para o ramal "+data);
+    },
+
+    callStatus: function(user){
+        var $usersDiv = user.parent();
+            seconds = new Date().getSeconds(),
+            $callTime = $('#timeCall');
+
+        $usersDiv.addClass('inUse');
+        
+        $callTime.append('allalala');
     }
 });
