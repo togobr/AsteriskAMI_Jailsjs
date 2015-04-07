@@ -355,6 +355,41 @@ O CSS \textit{Cascading Style Sheets} é uma linguagem para estilos que define o
 Criada por Brendan Eich e lançado pela primeira vez na versão beta do navegador NetScape 2.0 em 1995, o Javascript é uma linguagem programação interpretada no lado cliente, ou seja, é processada pelo próprio navegador. Com o JavaScript podemos criar efeitos especiais para nossas páginas na Web, além de proporcionar uma maior interatividade com nossos usuários. \cite{JAVASCRIPT}
 Hoje o Javascript é considerado a principal linguagem para programação client-side em navegadores web e todos os exemplos de códigos aqui apresentados, o utilizam. 
 
+\chapter{Implementação da aplicação} % artigo é dividido por sessões
+\label{c_bibliografia} % serve para referência cruzada
+Após algumas pesquisas envolvendo projetos utilizando WebRTC, iniciou-se a fase de desenvolvimento do projeto. Foram definidas os requisitos para que esta fosse implementada de acordo com o pretendido.
+
+Neste capítulo, será apresentado como a aplicação deverá funcionar após seu termino, descrevendo a funcionalidade dos módulos e como todo o sistema está interagindo. 
+
+\section{Requisitos Funcionais}
+O objetivo deste projeto é desenvolver uma aplicação WebRTC+SIP robusta, onde um usuário consegue interagir com outros de maneira prática, e mostrar o desempenho da aplicação em diferentes plataformas. Esta seção apresenta os requisitos que foram definidos inicialmente no projeto. 
+
+\subsection{Estabelecimento de chamada}
+O sistema deve permitir que um usuário consiga estabelecer uma chamada através de video, áudio ou ambos, com outro usuário que estiver conectado no sistema. Em caso onde os ramais conectados estejam em ligação, ausente ou não conectados o sistema deverá informar o porque da ligação não ter sido completada com sucesso.
+
+\subsection{Estado de presença e Lista de contato}
+É um serviço que se encontra na maior parte de aplicações de \textit{chat}. É necessário um banco de dados que contenha todas as informações dos usuários que se encontram na lista de contatos, para quando necessário, exibir o estado de presença em que uma pessoa se encontra. (Ocupado, Disponível, Ausente, \textit{Offline}). Sempre que o estado de um usuário for alterado, é preciso notificar a todos que estão conectados, o estado deste, em tempo real.
+
+\subsection{Video, chat/mensagem instantâneas}
+Outro item desejável é no sistema, é um serviço de \textit{chat}. Cada usuário poderá abrir um canal de comunicação com outro, interagindo via mensagens instantâneas. 
+A solução sugerida foi o uso do framework Socket.io. O usuário envia sua mensagem para o servidor, e este se encarrega de encaminhar as mensagens para outros ou um cliente específico.
+
+\section{Requisitos Não Funcionais}
+Esta seção está relacionada ao uso da aplicação em termos de desempenho, usabilidade, confiabilidade, tecnologias envolvidas. Será descrita o que se deve esperar do sistema desenvolvido, 
+
+\subsection{Desempenho}
+ - O sistema deverá atualizar assim que o estado de um usuário for alterado. Não deverá ultrapassar mais que 5s.
+
+\subsection{Usabilidade}
+A interface deverá ser intuitiva. Desde a localização de um usuário disponível no sistema até a realização e encerramento da chamada.
+
+\subsection{Segurança}
+Nenhum agente externo poderá ter acesso aos dados trafegados.
+
+\subsection{Restrições}
+É garantido funcionamento apenas para versões atuais do Google Chrome e Mozilla Firefox.
+
+
 \chapter{Proposta} % artigo é dividido por sessões
 \label{c_bibliografia} % serve para referência cruzada
 

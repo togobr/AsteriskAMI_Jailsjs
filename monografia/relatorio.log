@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.23)  23 MAR 2015 14:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.23)  6 APR 2015 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -412,6 +412,10 @@ If that doesn't work, type  X <return>  to quit.
 Cap\'{\i }tulo 3.
 [19
 
+] [20] [21]
+Cap\'{\i }tulo 4.
+[22
+
 ]
 
 ! LaTeX Error: File `images/cenario' not found.
@@ -420,7 +424,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.373 ...hics[width = 1\linewidth]{images/cenario}
+l.408 ...hics[width = 1\linewidth]{images/cenario}
                                                   
 I could not locate the file with any of these extensions:
 .eps,.ps,.eps.gz,.ps.gz,.eps.Z
@@ -428,11 +432,11 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (39.43448pt too wide) in paragraph at lines 404--416
+Overfull \hbox (39.43448pt too wide) in paragraph at lines 439--451
  [][] 
  []
 
-(./relatorio.bbl [20] [21]
+(./relatorio.bbl [23] [24]
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 []\OT1/cmr/m/n/12 Voz so-bre ip - voip, Nov. 2011.  In-ter-net:
  []
@@ -460,9 +464,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
 []\OT1/cmr/m/n/12 Getting star-ted with we-brtc, fev 2014.  In-ter-net:
  []
 
-[22
+[25
 
-]) [23] (./relatorio.aux)
+]) [26] (./relatorio.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -476,4 +480,4 @@ Here is how much of TeX's memory you used:
  16 hyphenation exceptions out of 8191
  27i,8n,23p,604b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on relatorio.dvi (27 pages, 50672 bytes).
+Output written on relatorio.dvi (30 pages, 55020 bytes).
