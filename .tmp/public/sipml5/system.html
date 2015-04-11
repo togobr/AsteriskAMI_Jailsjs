@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="togo/styles/fontAwesome/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="togo/styles/systemOut.css">
+	
+	<script src="togo/js/lib/jquery-2.1.1.min.js"></script>
+	<script src="togo/js/lib/underscore.js"></script>
+	<script src="togo/js/lib/backbone.js"></script>
+	<script src="togo/js/lib/mustache.js"></script>
+    <script src="togo/js/views/UserView.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="wrapperLeft">
+			<div class="headerLeft">
+				<div class="localVideo">
+				
+				</div>
+				<div class="chat">
+					
+				</div>
+			</div>
+			
+			<div class="remoteVideo">
+				
+			</div>
+			<div class=""></div>
+		</div>
+
+		<div class="wrapperRight">
+			<div class="logo">
+				
+			</div>
+			<div class="usersDiv">
+
+			</div>
+		</div>
+
+
+	</div>
+	
+	<!--Template para a lista de usuários-->
+    <script id="userTemplate" type="text/template">
+		<ul data-ramal = "{{userRamal}}" > 
+			<li class="userStatus"><i class="fa fa-user"></i> {{userStatus}}</li> 
+			<li class="ramalNumber">{{userRamal}}</li> 
+			<li class="icon video"> <i class="fa fa-video-camera"></i> </li> 
+			<li class="icon audio"> <i class="fa fa-microphone"></i> </li> 
+			<li class="icon chat"> <i class="fa fa-weixin"></i> </li>
+		</ul>
+	</script>
+
+	<!--Geração de usuário-->
+	<script>
+		var user = 5,
+			userView = [];
+
+		for(var i=0; i<=5; i++){
+			userView[i] = new UserView();
+			userView[i].render();
+		}
+	</script> 
+</body>
+</html>

@@ -25,22 +25,25 @@
 \contentsline {section}{\numberline {2.4}Asterisk}{14}
 \contentsline {section}{\numberline {2.5}Tecnologia auxiliares}{15}
 \contentsline {subsection}{\numberline {2.5.1}sipML5}{15}
-\contentsline {section}{\numberline {2.6}Linguagens utilizadas no projeto}{16}
-\contentsline {subsection}{\numberline {2.6.1}HTML5}{16}
-\contentsline {subsection}{\numberline {2.6.2}CSS}{17}
-\contentsline {subsection}{\numberline {2.6.3}Javascript}{17}
-\contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o da aplica\IeC {\c c}\IeC {\~a}o}{19}
-\contentsline {section}{\numberline {3.1}Requisitos Funcionais}{19}
-\contentsline {subsection}{\numberline {3.1.1}Estabelecimento de chamada}{20}
-\contentsline {subsection}{\numberline {3.1.2}Estado de presen\IeC {\c c}a e Lista de contato}{20}
-\contentsline {subsection}{\numberline {3.1.3}Video, chat/mensagem instant\IeC {\^a}neas}{20}
-\contentsline {section}{\numberline {3.2}Requisitos N\IeC {\~a}o Funcionais}{21}
-\contentsline {subsection}{\numberline {3.2.1}Desempenho}{21}
-\contentsline {subsection}{\numberline {3.2.2}Usabilidade}{21}
-\contentsline {subsection}{\numberline {3.2.3}Seguran\IeC {\c c}a}{21}
-\contentsline {subsection}{\numberline {3.2.4}Restri\IeC {\c c}\IeC {\~o}es}{21}
-\contentsline {chapter}{\numberline {4}Proposta}{22}
-\contentsline {section}{\numberline {4.1}Cen\IeC {\'a}rio}{22}
-\contentsline {section}{\numberline {4.2}Ambiente de experimenta\IeC {\c c}\IeC {\~a}o}{23}
-\contentsline {section}{\numberline {4.3}Ambiente de desenvolvimento}{23}
-\contentsline {section}{\numberline {4.4}Cronograma}{23}
+\contentsline {subsection}{\numberline {2.5.2}Node.js}{16}
+\contentsline {subsection}{\numberline {2.5.3}Sails.js}{17}
+\contentsline {subsection}{\numberline {2.5.4}Socket.io}{18}
+\contentsline {section}{\numberline {2.6}Linguagens utilizadas no projeto}{18}
+\contentsline {subsection}{\numberline {2.6.1}HTML5}{18}
+\contentsline {subsection}{\numberline {2.6.2}CSS}{19}
+\contentsline {subsection}{\numberline {2.6.3}Javascript}{19}
+\contentsline {chapter}{\numberline {3}Implementa\IeC {\c c}\IeC {\~a}o da aplica\IeC {\c c}\IeC {\~a}o}{20}
+\contentsline {section}{\numberline {3.1}Requisitos Funcionais}{20}
+\contentsline {subsection}{\numberline {3.1.1}Estabelecimento de chamada}{21}
+\contentsline {subsection}{\numberline {3.1.2}Estado de presen\IeC {\c c}a e Lista de contato}{21}
+\contentsline {subsection}{\numberline {3.1.3}Video, chat/mensagem instant\IeC {\^a}neas}{21}
+\contentsline {section}{\numberline {3.2}Requisitos N\IeC {\~a}o Funcionais}{22}
+\contentsline {subsection}{\numberline {3.2.1}Desempenho}{22}
+\contentsline {subsection}{\numberline {3.2.2}Usabilidade}{22}
+\contentsline {subsection}{\numberline {3.2.3}Seguran\IeC {\c c}a}{22}
+\contentsline {subsection}{\numberline {3.2.4}Restri\IeC {\c c}\IeC {\~o}es}{22}
+\contentsline {chapter}{\numberline {4}Proposta}{23}
+\contentsline {section}{\numberline {4.1}Cen\IeC {\'a}rio}{23}
+\contentsline {section}{\numberline {4.2}Ambiente de experimenta\IeC {\c c}\IeC {\~a}o}{24}
+\contentsline {section}{\numberline {4.3}Ambiente de desenvolvimento}{24}
+\contentsline {section}{\numberline {4.4}Cronograma}{24}

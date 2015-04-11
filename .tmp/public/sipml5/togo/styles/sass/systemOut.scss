@@ -1,0 +1,13 @@
+@import "_mixins";
+@import "_colors";
+@import "_system";
+
+//Estilo original do sipML5
+@import "_index";
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

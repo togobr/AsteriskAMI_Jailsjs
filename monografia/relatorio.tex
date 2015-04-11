@@ -327,6 +327,30 @@ Seu uso, é recomendável no Google Chrome e Firefox stable. Nos demais navegado
   \label{f_mediaStream}
 \end{figure}
 
+\subsection{Node.js}
+O node.js é uma plataforma orientada a eventos, do lado do servidor, baseadas no V8 Javascript Engine, com o objetivo de criar aplicações de redes rápidas e escaláveis. 
+
+Servidores que utilizam o Java ou PHP que possui muitos acessos, necessitam de uma grande quantidade de memória, pois a cada conexão, é alocada cerca de 2MB do sistema. Ou seja, mais conexões, mais memória. 
+
+O node resolve esta questão trocando a maneira de como cada conexão é tratada no servidor. Cada conexão cria um processo que não requer que o bloco de memória o acompanhe. Node não permite bloqueios e alega que pode suportar dezenas de milhares de conexões simultânea.
+
+Integrado ao Node.js, o Node Package Manager (npm), implementa um repositório de módulos, onde cada um possui uma funcionalidade particular.  Projetos utilizando Node, podem fazer uso desse sistema.
+Neste TCC, utilizaremos apenas o Node Package Manager em nosso projeto, pois ele disponibiliza a utilização de um módulo essencial para o projeto, o socket.io. Mais adiante, será explicado este módulo. 
+
+* V8 Javascript Engine: É o interpretador de Javascript open source implementado pelo Google em C++ e utilizado pelo Google Chrome.
+
+\subsection{Sails.js}
+Sails.js é um framework que utiliza o conceito MVC(explicar), com suporte para os requisitos de aplicativos modernos: APIs orientadas a dados com uma arquitetura orientada a serviços escaláveis. Indicados para construção de serviços em tempo real. 
+
+O Sails roda em cima do Node.sj, e o utilizaremos neste TCC, pois em seu projeto base, já nos fornece toda uma estrutura de projeto, sem nos preocuparmos em começar do zero. Nos entrega também algumas dependências que será necessário para capturar alguns dados do Asterisk. A principal delas é o Socket.js 
+
+\subsection{Socket.io}
+O Socket.IO permite realizar comunicação bidirecional utilizando uma das APIs de transporte na seguinte ordem: WebSockets, FlashSockets, AJAX long polling, AJAX multipart streaming, Forever Iframe ou JSONP Polling. O motivo dessa ordem é garantir compatibilidade cross-browser.
+
+Largamente utilizado para geração de relatórios em tempo real, chats, jogos multiplayer online, aplicações de interação em tempo real com diversos usuários 
+
+É através do Socket.io que iremos coletar informações do Asterisk, para a atualização das informações em nosso sistema SIPML5.
+
 
 \section{Linguagens utilizadas no projeto}
 \label{s_linguagensProjeto}

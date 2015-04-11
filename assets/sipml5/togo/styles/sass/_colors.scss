@@ -1,0 +1,9 @@
+$colorBase: #FFFFFF;
+
+$amountDarken: 5%;
+$amountLighten: 4%;
+$darkColor: darken($colorBase, $amountDarken);
+$lightColor: lighten($colorBase, $amountLighten);
+
+
+

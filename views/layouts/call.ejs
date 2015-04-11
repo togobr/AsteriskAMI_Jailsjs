@@ -14,39 +14,39 @@
     <meta name="Description" content="HTML5 SIP client using WebRTC framework" />
     <meta name="author" content="Doubango Telecom" />
 
-    <!-- <base href="http://localhost/togo/TCC/"> -->
+    <!-- <base href="http://localhost/togo/sipml5/"> -->
 
     <!-- SIPML5 API:
     DEBUG VERSION: 'SIPml-api.js'
     RELEASE VERSION: 'release/SIPml-api.js'
     -->
-    <script src="TCC/SIPml-api.js?svn=224" type="text/javascript"> </script>
+    <script src="sipml5/SIPml-api.js?svn=224" type="text/javascript"> </script>
 
     <!-- Styles -->
 
-    <link href="TCC/assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="TCC/assets/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="sipml5/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="sipml5/assets/css/bootstrap-responsive.css" rel="stylesheet" />
 
     <!--Togo System-->
 
-    <link rel="stylesheet" type="text/css" href="TCC/togo/styles/fontAwesome/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="TCC/togo/styles/systemOut.css">
+    <link rel="stylesheet" type="text/css" href="sipml5/togo/styles/fontAwesome/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="sipml5/togo/styles/systemOut.css">
     
-    <script src="TCC/togo/js/lib/sails.io.js"></script>
+    <script src="sipml5/togo/js/lib/sails.io.js"></script>
     
-    <script src="TCC/togo/js/lib/jquery-2.1.1.min.js"></script>
-    <script src="TCC/togo/js/lib/underscore.js"></script>
-    <script src="TCC/togo/js/lib/backbone.js"></script>
-    <script src="TCC/togo/js/lib/mustache.js"></script>
-    <script src="TCC/togo/js/views/UserView.js"></script>
+    <script src="sipml5/togo/js/lib/jquery-2.1.1.min.js"></script>
+    <script src="sipml5/togo/js/lib/underscore.js"></script>
+    <script src="sipml5/togo/js/lib/backbone.js"></script>
+    <script src="sipml5/togo/js/lib/mustache.js"></script>
+    <script src="sipml5/togo/js/views/UserView.js"></script>
 
-    <script src="TCC/togo/js/controllers/sysController.js"></script>
+    <script src="sipml5/togo/js/controllers/sysController.js"></script>
 
     <!--Fim Togo System-->
 </head>
 
 <!-- Javascript code -->
-<script src="TCC/togo/js/lib/index.js" type="text/javascript"> </script>
+<script src="sipml5/togo/js/lib/index.js" type="text/javascript"> </script>
 
 <body style="cursor:wait">
     <h5 id="fakeStatus">Status: <span>Connected</span></h5>
@@ -123,7 +123,7 @@
         </div>
 
         <div class="wrapperRight">
-            <img src="TCC/togo/styles/assets/images/ifscLogo.png" alt="ifscLogo" class="logo">
+            <img src="sipml5/togo/styles/assets/images/ifscLogo.png" alt="ifscLogo" class="logo">
             <div class="usersDiv"></div>
 
         </div>
@@ -227,25 +227,25 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="TCC/assets/js/jquery.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-transition.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-alert.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-modal.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-dropdown.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-scrollspy.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-tab.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-tooltip.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-popover.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-button.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-collapse.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-carousel.js"></script>
-    <script type="text/javascript" src="TCC/assets/js/bootstrap-typeahead.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-transition.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-alert.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-scrollspy.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-tab.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-button.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-carousel.js"></script>
+    <script type="text/javascript" src="sipml5/assets/js/bootstrap-typeahead.js"></script>
 
     <!-- Audios -->
     <audio id="audio_remote" autoplay="autoplay" />
-    <audio id="ringtone" loop src="TCC/sounds/ringtone.wav" />
-    <audio id="ringbacktone" loop src="TCC/sounds/ringbacktone.wav" />
-    <audio id="dtmfTone" src="TCC/sounds/dtmf.wav" />
+    <audio id="ringtone" loop src="sipml5/sounds/ringtone.wav" />
+    <audio id="ringbacktone" loop src="sipml5/sounds/ringbacktone.wav" />
+    <audio id="dtmfTone" src="sipml5/sounds/dtmf.wav" />
 
 </body>
 </html>
