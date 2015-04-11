@@ -22,7 +22,7 @@ $(function() {
     16 = On Hold*/
 
     // conectando com backend
-    var socket = io.connect('http://localhost:1337');
+    var socket = io.connect();
         socket
             .on('connect', function () {
                 console.log('conectado ao server... aguardando respostas do back-end.');
