@@ -44,9 +44,14 @@ var UserView = Backbone.View.extend({
             x = $el.find('ul'),
             data = x.attr('data-ramal');
 
-            sipCall("call-audiovideo"); //função do pŕoprio sipML5. js/lib/index.js
+            // sipCall("call-audiovideo"); //função do pŕoprio sipML5. js/lib/index.js
 
-            this.callStatus($el);
+            // this.callStatus($el);
+            $('body').animate({
+                scrollTop: '+=520'
+            }, 500)
+
+            console.log('foo dagadaga');
     },
 
 

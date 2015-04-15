@@ -1,47 +1,49 @@
 body{
+	position: absolute;
+	height: 100%;
+	width: 100%;
 	background: #859e71;
 }
-
+ 
 ul, ol {
 	padding: 0;
 	margin: 0;
 }
 
-// ==================== LOGIN ====================
+// ==================== FIRST SCREEN ====================
 
-#fakeStatus{
-	padding: 5px;
-	text-align: center;
-	span{
-		color: #51a351;
-	}
-}
-
-#lockSystem{
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1050;
-	background: rgba(0, 0, 0, 0.9)
-}
-
-.registerBlock{
+.firstScreen{
 	position: relative;
-	height: 300px;
-	width: 350px;
-	background: $colorBase;
-	border: 1px solid #000;
-	z-index: 1;
+	background: green;
+	height: 100%;
+	width: 100%;
 
-	h2{
-		text-align: center;
-		margin-bottom: 10px;
+	.fsRight{
+		position: absolute;
+		height: 100%;
+		left: 45%;
+		right: 0px;
+		background: yellow;
 	}
 
-	table{
-		margin: 0 auto;
+	.fsRight .loginWrapper{
+		position: relative;
+		background: red;
+		width: 450px;
+		&>div{
+			position: relative;
+			width: 430px;
+			margin: 10px;
+			input{
+				position: absolute;
+				right: 0px;
+			}
+			&:last-child{
+				input{
+					position: relative;
+				}
+			}
+		}
 	}
 }
 
@@ -247,5 +249,5 @@ ul, ol {
 // ==================== SIPML5 ELEMENTS ====================
 
 #divCallCtrl{
-	// display: none !important;
+	display: none !important;
 }

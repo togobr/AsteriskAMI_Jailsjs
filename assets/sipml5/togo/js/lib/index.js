@@ -257,6 +257,7 @@
 
     // sends SIP REGISTER request to login
     function sipRegister() {
+        console.log('foo sipRegister');
         // catch exception for IE (DOM not ready)
         try {
             btnRegister.disabled = true;
@@ -404,7 +405,6 @@
         
         $usersDiv.removeClass('inUse');
         //Fim Togo
-        console.log('foo HUEEEEEEEEEEE', $usersDiv);
 
         if (oSipSessionCall) {
             txtCallStatus.innerHTML = '<i>Terminating the call...</i>';

@@ -49,59 +49,46 @@
 <script src="sipml5/togo/js/lib/index.js" type="text/javascript"> </script>
 
 <body style="cursor:wait">
-    <h5 id="fakeStatus">Status: <span>Connected</span></h5>
-        <div class="registerBlock" >
-            <label style="width: 100%;" align="center" id="txtRegStatus"></label>
-            <h2>Registration</h2>
-            <table>
-                <tr>
-                    <td> Nome </td>
-                    <td>
-                        <input type="text" id="txtDisplayName" value="" placeholder="e.g. John Doe" />
-                    </td>
-                </tr>
+    <div class="firstScreen">
+        <div class="fsRight">
+            <div class="loginWrapper">
+                <label style="width: 100%;" align="center" id="txtRegStatus"></label>
+                <h2>Registrar</h2>
 
-                <tr>
-                    <td> Identidade Privada* </td>
-                    <td>
-                        <input type="text" id="txtPrivateIdentity" value="" placeholder="e.g. +33600000000" />
-                    </td>
-                </tr>
+                <div>
+                    <span>Nome: </span>
+                    <input type="text" id="txtDisplayName" value="" placeholder="e.g. John Doe" />
+                </div>
+                
+                <div>
+                    <span>Identidade Privada: </span>
+                    <input type="text" id="txtPrivateIdentity" value="" placeholder="e.g. +33600000000" />
+                </div>
 
-                <tr>
-                    <td> Identidade Pública* </td>
-                    <td> 
-                        <input type="text" id="txtPublicIdentity" value="" placeholder="e.g. sip:+33600000000@doubango.org" /> 
-                    </td>
-                </tr>
+                <div>
+                    <span>Identidade Pública: </span>
+                    <input type="text" id="txtPublicIdentity" value="" placeholder="e.g. sip:+33600000000@doubango.org" /> 
+                </div>
 
-                <tr>
-                    <td> Senha </td>
-                    <td> <input type="password" id="txtPassword" value="" /></td>
-                </tr>
+                <div>
+                    <span>Senha: </span>
+                    <input type="password" id="txtPassword" value="" />
+                </div>
 
-                <tr>
-                    <td> Servidor </td>
-                    <td> 
-                        <input type="text" id="txtRealm" value="" placeholder="e.g. doubango.org" /> 
-                    </td>
-                </tr>
+                <div>
+                    <span>Servidor: </span>
+                    <input type="text" id="txtRealm" value="" placeholder="e.g. doubango.org" /> 
+                </div>
 
-                <tr>
-                    <td colspan="2" align="right">
-                        <input type="button" class="btn btn-success" id="btnRegister" value="LogIn" disabled onclick='sipRegister();' />
-                        &nbsp;
-                        <input type="button" class="btn btn-danger" id="btnUnRegister" value="LogOut" disabled onclick='sipUnRegister();' />
-                    </td>
-                </tr>
+                <input type="button" class="btn btn-success" id="btnRegister" value="LogIn" disabled onclick='sipRegister();' />
 
-                <tr>
-                    <td colspan="3">
-                        <a class="btn" href="./expert" target="_blank">Expert mode?</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                <input type="button" class="btn btn-danger" id="btnUnRegister" value="LogOut" disabled onclick='sipUnRegister();' />
+
+                <a class="btn" href="./expert" target="_blank">Expert mode?</a>
+            </div>
+        </div> 
+    </div>
+    
     <div class="wrapper">
         
         <div class="wrapperLeft">
