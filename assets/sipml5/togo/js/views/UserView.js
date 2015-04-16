@@ -47,11 +47,6 @@ var UserView = Backbone.View.extend({
             // sipCall("call-audiovideo"); //função do pŕoprio sipML5. js/lib/index.js
 
             // this.callStatus($el);
-            $('body').animate({
-                scrollTop: '+=520'
-            }, 500)
-
-            console.log('foo dagadaga');
     },
 
 

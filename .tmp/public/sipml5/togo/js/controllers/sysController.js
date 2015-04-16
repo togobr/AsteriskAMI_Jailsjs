@@ -65,6 +65,13 @@ $(function() {
                     $('.usersDiv').append(user_view.$el);
                 });
 
+                // $qwe = $('.usersDiv')
+                //     .find('.user')
+                //     .find("[data-ramal='" + 100 + "']")
+                //     .clone();
+
+                // $('.ssHeader').append($qwe);
+
                 //insere na usersDiv um bloco que vai conter o status da ligação, e o botão de encerrar a ligação também.
                 $('.usersDiv').append(
                     '<div class="callStatus">' +

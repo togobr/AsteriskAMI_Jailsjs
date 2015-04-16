@@ -82,39 +82,50 @@
 
                 <input type="button" class="btn btn-success" id="btnRegister" value="LogIn" disabled onclick='sipRegister();' />
 
-                <input type="button" class="btn btn-danger" id="btnUnRegister" value="LogOut" disabled onclick='sipUnRegister();' />
+               
 
                 <a class="btn" href="./expert" target="_blank">Expert mode?</a>
             </div>
         </div> 
+        <div class="fsLeft">
+        </div>
     </div>
     
-    <div class="wrapper">
-        
-        <div class="wrapperLeft">
-            <div class="headerLeft">
-                <div class="localVideo">
-                    <h5>Video: Usuário Local</h5>
-<!--                     <video class="video" id="video_local" autoplay="autoplay" muted="true"> </video> -->
-                </div>
-                <div class="chat">
-                    
-                </div>
+    <div class="secondScreen">
+        <div class="ssHeader">
+            <div>
+                <span>Estado da ligação: </span>
+                <label align="center" id="txtCallStatus"></label>
             </div>
             
-            <div class="remoteVideo">
-                <label style="width: 100%;" align="center" id="txtCallStatus"></label>
-                <h5>Video: Usuário Remoto</h5>
-<!--                 <video class="video" id="video_remote" autoplay="autoplay"></video> -->
+            <input type="button" class="btn btn-danger" id="btnUnRegister" value="Desconectar" disabled onclick='sipUnRegister();' />
+        </div>
+
+        <div class="wrapper">
+            <div class="wrapperLeft">
+                <div class="headerLeft">
+                    <div class="localVideo">
+                        <h5>Video: Usuário Local</h5>
+    <!--                     <video class="video" id="video_local" autoplay="autoplay" muted="true"> </video> -->
+                    </div>
+                    <div class="chat">
+                        
+                    </div>
+                </div>
+                
+                <div class="remoteVideo">
+                    <h5>Video: Usuário Remoto</h5>
+    <!--                 <video class="video" id="video_remote" autoplay="autoplay"></video> -->
+                </div>
+            </div>
+
+            <div class="wrapperRight">
+                <img src="sipml5/togo/styles/assets/images/ifscLogo.png" alt="ifscLogo" class="logo">
+                <div class="usersDiv"></div>
             </div>
         </div>
-
-        <div class="wrapperRight">
-            <img src="sipml5/togo/styles/assets/images/ifscLogo.png" alt="ifscLogo" class="logo">
-            <div class="usersDiv"></div>
-
-        </div>
     </div>
+    
 
 
     <div id="divCallCtrl" class="span7 well" style='display:table-cell; vertical-align:middle'>            

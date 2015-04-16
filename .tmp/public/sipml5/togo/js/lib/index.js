@@ -257,10 +257,10 @@
 
     // sends SIP REGISTER request to login
     function sipRegister() {
-        console.log('foo sipRegister');
         // catch exception for IE (DOM not ready)
         try {
             btnRegister.disabled = true;
+            //verifica se todos os campos estão devidamente preenchidos
             if (!txtRealm.value || !txtPrivateIdentity.value || !txtPublicIdentity.value) {
                 txtRegStatus.innerHTML = '<b>Please fill madatory fields (*)</b>';
                 btnRegister.disabled = false;
@@ -304,8 +304,8 @@
                             { name: 'User-Agent', value: 'IM-client/OMA1.0 sipML5-v1.2014.04.18' },
                             { name: 'Organization', value: 'Doubango Telecom' }
                     ]
-                }
-            );
+            });
+
             if (oSipStack.start() != 0) {
                 txtRegStatus.innerHTML = '<b>Failed to start the SIP stack</b>';
             }
@@ -322,6 +322,13 @@
         if (oSipStack) {
             oSipStack.stop(); // shutdown all sessions
         }
+        //Ao clicar em desconctar, a tela sobre para o login novamente 
+        //e apaga o usuário que está no header ---- Togo
+        $('body').animate({
+            scrollTop: 0
+        }, 800)
+
+        $( ".ssHeader ul" ).remove();
     }
 
     // makes a call (SIP INVITE)
@@ -725,15 +732,36 @@
     // Callback function for SIP sessions (INVITE, REGISTER, MESSAGE...)
     function onSipEventSession(e /* SIPml.Session.Event */) {
         tsk_utils_log_info('==session event = ' + e.type);
-        var modal = $("#lockSystem");
 
         switch (e.type) {
             case 'connecting': case 'connected':
+
+            // console.log('foo onSipEventSession', e.type); Togo
                 {
                     var bConnected = (e.type == 'connected');
                     if (e.session == oSipSessionRegister) {
                         uiOnConnectionEvent(bConnected, !bConnected);
                         txtRegStatus.innerHTML = "<i>" + e.description + "</i>";
+            
+                        //togo inicio
+                        if(bConnected){
+                            //Ao clicar em login, e o usuário se connectar corretamente
+                            //a tela desliza direto para o sistema 
+                            $('body').animate({
+                                scrollTop: $(".secondScreen").offset().top
+                            }, 800)
+
+                            //Captura o input do número do ramal inserido, captura na lista de ramais
+                            //e injeta no header 
+                            var ramal = $('#txtPrivateIdentity').val();
+
+                            $ramalCopy = $('.usersDiv')
+                                .find('.user')
+                                .find("[data-ramal='" + ramal + "']");
+
+                            $('.ssHeader').append($ramalCopy);
+                        }
+                        //togo fim
                     }
                     else if (e.session == oSipSessionCall) {
                         btnHangUp.value = 'HangUp';
