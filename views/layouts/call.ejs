@@ -50,44 +50,60 @@
 
 <body style="cursor:wait">
     <div class="firstScreen">
+
         <div class="fsRight">
             <div class="loginWrapper">
                 <label style="width: 100%;" align="center" id="txtRegStatus"></label>
-                <h2>Registrar</h2>
 
-                <div>
-                    <span>Nome: </span>
-                    <input type="text" id="txtDisplayName" value="" placeholder="e.g. John Doe" />
+                <div class="inputBlock">
+                    <h5>Nome: </h5>
+                    <div>
+                        <span class="icon-user"></span>
+                        <input type="text" id="txtDisplayName" value="" placeholder="e.g. John Doe" />
+                    </div>
                 </div>
                 
-                <div>
-                    <span>Identidade Privada: </span>
-                    <input type="text" id="txtPrivateIdentity" value="" placeholder="e.g. +33600000000" />
+                <div class="inputBlock">
+                    <h5>Identidade Privada: </h5>
+                    <div>
+                        <span class="icon-home3"></span>
+                        <input type="text" id="txtPrivateIdentity" value="" placeholder="e.g. +33600000000" />
+                    </div>
+                </div>
+                
+                <div class="inputBlock">
+                    <h5>Identidade Pública: </h5>
+                    <div>
+                        <span class="icon-earth"></span>
+                        <input type="text" id="txtPublicIdentity" value="" placeholder="e.g. sip:+33600000000@doubango.org" /> 
+                    </div> 
                 </div>
 
-                <div>
-                    <span>Identidade Pública: </span>
-                    <input type="text" id="txtPublicIdentity" value="" placeholder="e.g. sip:+33600000000@doubango.org" /> 
+                <div class="inputBlock">
+                    <h5>Senha: </h5>
+                    <div>
+                        <span class="icon-lock"></span>
+                        <input type="password" id="txtPassword" value="" />
+                    </div> 
                 </div>
 
-                <div>
-                    <span>Senha: </span>
-                    <input type="password" id="txtPassword" value="" />
+                <div class="inputBlock">
+                    <h5>Servidor: </h5>
+                    <div>
+                        <span class="icon-database"></span>
+                        <input type="text" id="txtRealm" value="" placeholder="e.g. doubango.org" /> 
+                    </div>
                 </div>
 
-                <div>
-                    <span>Servidor: </span>
-                    <input type="text" id="txtRealm" value="" placeholder="e.g. doubango.org" /> 
-                </div>
+                <input type="button" class="btn btn-success" id="btnRegister" value="Conectar" disabled onclick='sipRegister();' />
 
-                <input type="button" class="btn btn-success" id="btnRegister" value="LogIn" disabled onclick='sipRegister();' />
-
-               
-
-                <a class="btn" href="./expert" target="_blank">Expert mode?</a>
+                <a class="avancadoLink" href="./expert" target="_blank">Avançado</a>
             </div>
         </div> 
+
+
         <div class="fsLeft">
+            <img src="sipml5/togo/styles/assets/images/imgCapa.png" alt="">
         </div>
     </div>
     

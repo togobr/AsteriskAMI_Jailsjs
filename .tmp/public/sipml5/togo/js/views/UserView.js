@@ -1,3 +1,8 @@
+var counter = 0;
+var hourcounter = 0;
+var minutecounter = 0;
+var secondcounter = 0;
+
 var UserView = Backbone.View.extend({
     tagName: 'div',
     className: 'user',
@@ -46,9 +51,8 @@ var UserView = Backbone.View.extend({
 
             // sipCall("call-audiovideo"); //função do pŕoprio sipML5. js/lib/index.js
 
-            // this.callStatus($el);
+            this.callStatus($el);
     },
-
 
     openAudio: function() {
         var $el = $(this.el),
@@ -74,12 +78,28 @@ var UserView = Backbone.View.extend({
     },
 
     callStatus: function(user){
-        var $usersDiv = user.parent();
-            seconds = new Date().getSeconds(),
-            $callTime = $('#timeCall');
+        var $usersDiv = user.parent(),
+            seconds = new Date().getSeconds();
 
-        $usersDiv.addClass('inUse');
-        
-        $callTime.append('allalala');
+        $usersDiv.addClass('inUse');   
+        setInterval(
+            function(){
+                var d = new Date(),
+                $secondelement = $('#secondelement'),
+                $minuteelement = $('#minuteelement'),
+                $hourelement = $('#hourelement');
+
+                secondcounter = secondcounter + 1;
+                $secondelement.html(secondcounter);
+                    if ( (secondcounter%60) == 0) {
+                        minutecounter = minutecounter + 1;
+                        $minuteelement.html(minutecounter);
+                        if ( (minutecounter%60) == 0) {
+                            hourcounter = hourcounter + 1;
+                            $hourelement.html(hourcounter);
+                        }
+                    }
+            },1000
+        );
     }
 });

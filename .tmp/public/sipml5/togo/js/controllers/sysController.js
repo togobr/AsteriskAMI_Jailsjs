@@ -65,17 +65,12 @@ $(function() {
                     $('.usersDiv').append(user_view.$el);
                 });
 
-                // $qwe = $('.usersDiv')
-                //     .find('.user')
-                //     .find("[data-ramal='" + 100 + "']")
-                //     .clone();
-
-                // $('.ssHeader').append($qwe);
-
                 //insere na usersDiv um bloco que vai conter o status da ligação, e o botão de encerrar a ligação também.
                 $('.usersDiv').append(
                     '<div class="callStatus">' +
-                        '<span id="timeCall"></span>' +
+                        '<span id="hourelement">0</span>:' +
+                        '<span id="minuteelement">00</span>:' +
+                        '<span id="secondelement">00</span>' +
                         '<input type="button" id="btnHangUp" class="btn btn-primary" value="HangUp" onclick="sipHangUp();"/>'+
                     '</div>'
                 );
