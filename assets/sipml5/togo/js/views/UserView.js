@@ -84,10 +84,9 @@ var UserView = Backbone.View.extend({
         $usersDiv.addClass('inUse');   
         setInterval(
             function(){
-                var d = new Date(),
-                $secondelement = $('#secondelement'),
-                $minuteelement = $('#minuteelement'),
-                $hourelement = $('#hourelement');
+                var $secondelement = $('#secondelement'),
+                    $minuteelement = $('#minuteelement'),
+                    $hourelement = $('#hourelement');
 
                 secondcounter = secondcounter + 1;
                 $secondelement.html(secondcounter);

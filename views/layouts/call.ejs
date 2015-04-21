@@ -53,6 +53,8 @@
 
         <div class="fsRight">
             <div class="loginWrapper">
+                <h1>Telecomunicões IFSC</h1>
+                <h3>WebRTC & Asterisk</h3>
                 <label style="width: 100%;" align="center" id="txtRegStatus"></label>
 
                 <div class="inputBlock">
@@ -100,21 +102,29 @@
                 <a class="avancadoLink" href="./expert" target="_blank">Avançado</a>
             </div>
         </div> 
-
-
+        
         <div class="fsLeft">
             <img src="sipml5/togo/styles/assets/images/imgCapa.png" alt="">
         </div>
     </div>
     
     <div class="secondScreen">
+
+        <div class="lockScreen">
+            <div class="icon-lock">
+                <span>Sistema bloqueado. Necessário realizar login</span>
+            </div>
+        </div>
+
         <div class="ssHeader">
-            <div>
-                <span>Estado da ligação: </span>
+            <div class="callStatus">
+                <span>Estado da ligação</span>
                 <label align="center" id="txtCallStatus"></label>
             </div>
             
-            <input type="button" class="btn btn-danger" id="btnUnRegister" value="Desconectar" disabled onclick='sipUnRegister();' />
+            <div class="disconnectBtn icon-exit">
+                <input type="button" class="btn btn-danger " id="btnUnRegister" disabled onclick='sipUnRegister();'/>
+            </div>
         </div>
 
         <div class="wrapper">
@@ -140,6 +150,8 @@
                 <div class="usersDiv"></div>
             </div>
         </div>
+
+        <div class="footer"></div>
     </div>
     
 
@@ -199,9 +211,6 @@
 
     <!-- /container -->
 
-    <!-- Togo wrapper-->
-        
-    
     <!--Template para a lista de usuários-->
     <script id="userTemplate" type="text/template">
         <ul data-ramal = "{{objectname}}" > 
@@ -212,9 +221,6 @@
             <li class="icon chat"> <i class="fa fa-weixin"></i> </li>
         </ul>
     </script>
-
-
-    <!-- Fim Togo wrapper-->
 
     <!-- Glass Panel -->
     <div id='divGlassPanel' class='glass-panel' style='visibility:hidden'></div>

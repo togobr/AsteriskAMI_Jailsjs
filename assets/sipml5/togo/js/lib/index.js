@@ -328,7 +328,8 @@
             scrollTop: 0
         }, 800)
 
-        $( ".ssHeader ul" ).remove();
+        $(".ssHeader ul" ).remove();
+        $(".lockScreen").show();
     }
 
     // makes a call (SIP INVITE)
@@ -752,7 +753,7 @@
                             }, 800)
 
                             //Captura o input do número do ramal inserido, captura na lista de ramais
-                            //e injeta no header 
+                            //e injeta no header do secondScreen
                             var ramal = $('#txtPrivateIdentity').val();
 
                             $ramalCopy = $('.usersDiv')
@@ -760,6 +761,7 @@
                                 .find("[data-ramal='" + ramal + "']");
 
                             $('.ssHeader').append($ramalCopy);
+                            $('.lockScreen').hide();
                         }
                         //togo fim
                     }

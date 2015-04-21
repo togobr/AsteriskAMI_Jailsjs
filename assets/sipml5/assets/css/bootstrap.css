@@ -1388,7 +1388,7 @@ table .span24 {
   width: 1884px;
   margin-left: 0;
 }
-[class^="icon-"],
+/*[class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
   width: 14px;
@@ -1403,7 +1403,7 @@ table .span24 {
 [class^="icon-"]:last-child,
 [class*=" icon-"]:last-child {
   *margin-left: 0;
-}
+}*/
 .icon-white {
   background-image: url("../img/glyphicons-halflings-white.png");
 }
