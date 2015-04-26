@@ -1,1 +1,7 @@
 node_modules
+
+.sass-cache
+*.css.map
+
+assets/sipml5/togo/styles/.sass-cache
+

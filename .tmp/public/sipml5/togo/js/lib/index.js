@@ -394,7 +394,7 @@
     // holds or resumes the call
     function sipToggleHoldResume() {
         if (oSipSessionCall) {
-            var i_ret;
+            var i_ret; 
             btnHoldResume.disabled = true;
             txtCallStatus.innerHTML = oSipSessionCall.bHeld ? '<i>Resuming the call...</i>' : '<i>Holding the call...</i>';
             i_ret = oSipSessionCall.bHeld ? oSipSessionCall.resume() : oSipSessionCall.hold();
@@ -409,9 +409,9 @@
     // terminates the call (SIP BYE or CANCEL)
     function sipHangUp() {
         //Togo
-        var $usersDiv = $('.usersDiv');
+        var $blockCallStatus = $('.blockCallStatus');
         
-        $usersDiv.removeClass('inUse');
+        $blockCallStatus.removeClass('inUse');
         //Fim Togo
 
         if (oSipSessionCall) {
@@ -523,7 +523,7 @@
             if (tsk_utils_have_stream()) {
                 btnCall.disabled = (!tsk_utils_have_stream() || !oSipSessionRegister || !oSipSessionRegister.is_connected());
                 document.getElementById("divCallCtrl").onmousemove = null; // unsubscribe
-            }
+            }3
         }
         catch (e) { }
     }
@@ -760,7 +760,8 @@
                                 .find('.user')
                                 .find("[data-ramal='" + ramal + "']");
 
-                            $('.ssHeader').append($ramalCopy);
+                            $('.ssHeader').append($ramalCopy.parent());
+                            console.log('foo togo', $ramalCopy);
                             $('.lockScreen').hide();
                         }
                         //togo fim

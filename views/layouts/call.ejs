@@ -117,7 +117,7 @@
         </div>
 
         <div class="ssHeader">
-            <div class="callStatus">
+            <div class="header_callStatus">
                 <span>Estado da ligação</span>
                 <label align="center" id="txtCallStatus"></label>
             </div>
@@ -129,26 +129,57 @@
 
         <div class="wrapper">
             <div class="wrapperLeft">
+                <h2>Usuários</h2>
+                <div class="usersDiv"></div>
+            </div>
+
+            <div class="wrapperRight">
+                <div class="chat">
+                    <div class="blockInputMsg">
+                        <input class="inputMessage">
+                        <span>
+                            <button type="button">Enviar</button>
+                        </span>
+                    </div>     
+                </div>
+
+                <div class="blockCallStatus">
+                    <h3>Origem</h3>
+                    <span>???</span>
+                    <h3>Destino</h3>
+                    <span>???</span>
+                    <h3>Tipo de ligação</h3>
+                    <span>Áudio</span>
+                    <h3>Tempo de ligação</h3>
+                    <div class="callTime">
+                        <span id="hourelement">0</span>
+                        <span id="minuteelement">00</span>
+                        <span id="secondelement">00</span>
+                    </div>
+                    
+                    <div id="divBtnCallGroup" class="btn-group">
+                        <button id="btnCall" disabled class="btn btn-primary" data-toggle="dropdown">Atender</button>
+                    </div>
+                    <input type="button" id="btnHangUp" class="btn btn-primary" value="Desligar" onclick="sipHangUp();"/>
+                </div>
+            </div>
+
+<!--             <div class="wrapperRight">
                 <div class="headerLeft">
                     <div class="localVideo">
                         <h5>Video: Usuário Local</h5>
-    <!--                     <video class="video" id="video_local" autoplay="autoplay" muted="true"> </video> -->
+                        <video class="video" id="video_local" autoplay="autoplay" muted="true"> </video>
                     </div>
-                    <div class="chat">
-                        
-                    </div>
+                    <div class="chat"></div>
                 </div>
                 
                 <div class="remoteVideo">
                     <h5>Video: Usuário Remoto</h5>
-    <!--                 <video class="video" id="video_remote" autoplay="autoplay"></video> -->
+                    <video class="video" id="video_remote" autoplay="autoplay"></video>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="wrapperRight">
-                <img src="sipml5/togo/styles/assets/images/ifscLogo.png" alt="ifscLogo" class="logo">
-                <div class="usersDiv"></div>
-            </div>
+            
         </div>
 
         <div class="footer"></div>
@@ -170,9 +201,9 @@
                         <tr>
                             <td colspan="1" align="right">
                                 <div class="btn-toolbar" style="margin: 0; vertical-align:middle">
-                                    <div id="divBtnCallGroup" class="btn-group">
+                                    <!-- <div id="divBtnCallGroup" class="btn-group">
                                         <button id="btnCall" disabled class="btn btn-primary" data-toggle="dropdown">Call</button>
-                                    </div>&nbsp;&nbsp;
+                                    </div> -->&nbsp;&nbsp;
                                     <div class="btn-group">
                                         <input type="button" id="btnHangUp" style="margin: 0; vertical-align:middle; height: 100%;" class="btn btn-primary" value="HangUp" onclick='sipHangUp();' disabled />
                                     </div>

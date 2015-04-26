@@ -78,10 +78,10 @@ var UserView = Backbone.View.extend({
     },
 
     callStatus: function(user){
-        var $usersDiv = user.parent(),
+        var $blockCallStatus = $('.blockCallStatus');
             seconds = new Date().getSeconds();
 
-        $usersDiv.addClass('inUse');   
+        $blockCallStatus.addClass('inUse');   
         setInterval(
             function(){
                 var $secondelement = $('#secondelement'),

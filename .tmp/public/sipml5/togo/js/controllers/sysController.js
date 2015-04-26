@@ -64,16 +64,6 @@ $(function() {
 
                     $('.usersDiv').append(user_view.$el);
                 });
-
-                //insere na usersDiv um bloco que vai conter o status da ligação, e o botão de encerrar a ligação também.
-                $('.usersDiv').append(
-                    '<div class="callStatus">' +
-                        '<span id="hourelement">0</span>:' +
-                        '<span id="minuteelement">00</span>:' +
-                        '<span id="secondelement">00</span>' +
-                        '<input type="button" id="btnHangUp" class="btn btn-primary" value="HangUp" onclick="sipHangUp();"/>'+
-                    '</div>'
-                );
                  
             })
             /*.on('show result', function(result) {
