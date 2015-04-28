@@ -58,11 +58,14 @@ var UserView = Backbone.View.extend({
         var $el = $(this.el),
             x = $el.find('ul'),
             data = x.attr('data-ramal'),
-            $id_txtPhoneNumber = $('#txtPhoneNumber');
+            $id_txtPhoneNumber = $('#txtPhoneNumber'),
+            $remoteRamal = $('#remoteRamal');
 
             //para não mudar muito a estrutura original do sipML5, foi pego o número do ramal 
             //e setado no input #txtPhoneNumber que o próprio sipML5 trata.
             $id_txtPhoneNumber.val(data);
+
+            $remoteRamal.html(data);
 
             sipCall("call-audio"); //função do pŕoprio sipML5. js/lib/index.js
 
@@ -82,23 +85,6 @@ var UserView = Backbone.View.extend({
             seconds = new Date().getSeconds();
 
         $blockCallStatus.addClass('inUse');   
-        setInterval(
-            function(){
-                var $secondelement = $('#secondelement'),
-                    $minuteelement = $('#minuteelement'),
-                    $hourelement = $('#hourelement');
-
-                secondcounter = secondcounter + 1;
-                $secondelement.html(secondcounter);
-                    if ( (secondcounter%60) == 0) {
-                        minutecounter = minutecounter + 1;
-                        $minuteelement.html(minutecounter);
-                        if ( (minutecounter%60) == 0) {
-                            hourcounter = hourcounter + 1;
-                            $hourelement.html(hourcounter);
-                        }
-                    }
-            },1000
-        );
+        
     }
 });

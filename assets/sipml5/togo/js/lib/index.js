@@ -38,7 +38,7 @@
         loadCallOptions();
 
         // Initialize call button
-        uiBtnCallSetText("Call");
+        uiBtnCallSetText("Atender");
 
         var getPVal = function (PName) {
             var query = window.location.search.substring(1);
@@ -382,7 +382,7 @@
             if (!tsk_string_is_null_or_empty(s_destination)) {
                 btnTransfer.disabled = true;
                 if (oSipSessionCall.transfer(s_destination) != 0) {
-                    txtCallStatus.innerHTML = '<i>Call transfer failed</i>';
+                    txtCallStatus.innerHTML = '<i>Atender transfer failed</i>';
                     btnTransfer.disabled = false;
                     return;
                 }
@@ -410,8 +410,12 @@
     function sipHangUp() {
         //Togo
         var $blockCallStatus = $('.blockCallStatus');
+                $secondelement = $('#secondelement'),
+                $minuteelement = $('#minuteelement'),
+                $hourelement = $('#hourelement');
         
         $blockCallStatus.removeClass('inUse');
+
         //Fim Togo
 
         if (oSipSessionCall) {
@@ -521,9 +525,12 @@
     function onDivCallCtrlMouseMove(evt) {
         try { // IE: DOM not ready
             if (tsk_utils_have_stream()) {
-                btnCall.disabled = (!tsk_utils_have_stream() || !oSipSessionRegister || !oSipSessionRegister.is_connected());
+                //togo inicio
+                // btnCall.disabled = (!tsk_utils_have_stream() || !oSipSessionRegister || !oSipSessionRegister.is_connected());
+                //togo fim
+                btnCall.disabled = true;
                 document.getElementById("divCallCtrl").onmousemove = null; // unsubscribe
-            }3
+            }
         }
         catch (e) { }
     }
@@ -531,7 +538,10 @@
     function uiOnConnectionEvent(b_connected, b_connecting) { // should be enum: connecting, connected, terminating, terminated
         btnRegister.disabled = b_connected || b_connecting;
         btnUnRegister.disabled = !b_connected && !b_connecting;
-        btnCall.disabled = !(b_connected && tsk_utils_have_webrtc() && tsk_utils_have_stream());
+        //togo inicio
+        // btnCall.disabled = !(b_connected && tsk_utils_have_webrtc() && tsk_utils_have_stream());
+        //togo fim
+        btnCall.disabled = true;
         btnHangUp.disabled = !oSipSessionCall;
     }
 
@@ -576,17 +586,17 @@
     function uiDisableCallOptions() {
         if(window.localStorage) {
             window.localStorage.setItem('org.doubango.expert.disable_callbtn_options', 'true');
-            uiBtnCallSetText('Call');
+            uiBtnCallSetText('Atender');
             alert('Use expert view to enable the options again (/!\\requires re-loading the page)');
         }
     }
 
     function uiBtnCallSetText(s_text) {
         switch(s_text) {
-            case "Call":
+            case "Atender":
                 {
                     var bDisableCallBtnOptions = (window.localStorage && window.localStorage.getItem('org.doubango.expert.disable_callbtn_options') == "true");
-                    btnCall.value = btnCall.innerHTML = bDisableCallBtnOptions ? 'Call' : 'Call <span id="spanCaret" class="caret">';
+                    btnCall.value = btnCall.innerHTML = bDisableCallBtnOptions ? 'Atender' : 'Atender <span id="spanCaret" class="caret">';
                     btnCall.setAttribute("class", bDisableCallBtnOptions ? "btn btn-primary" : "btn btn-primary dropdown-toggle");
                     btnCall.onclick = bDisableCallBtnOptions ? function(){ sipCall(bDisableVideo ? 'call-audio' : 'call-audiovideo'); } : null;
                     ulCallOptions.style.visibility = bDisableCallBtnOptions ? "hidden" : "visible";
@@ -614,10 +624,10 @@
     }
 
     function uiCallTerminated(s_description){
-        uiBtnCallSetText("Call");
+        uiBtnCallSetText("Atender");
         btnHangUp.value = 'HangUp';
         btnHoldResume.value = 'hold';
-        btnCall.disabled = false;
+        btnCall.disabled = true; //togo
         btnHangUp.disabled = true;
 
         oSipSessionCall = null;
@@ -697,7 +707,7 @@
                         // start listening for events
                         oSipSessionCall.setConfiguration(oConfigCall);
 
-                        uiBtnCallSetText('Answer');
+                        uiBtnCallSetText('Atender');
                         btnHangUp.value = 'Reject';
                         btnCall.disabled = false;
                         btnHangUp.disabled = false;
@@ -755,6 +765,8 @@
                             //Captura o input do número do ramal inserido, captura na lista de ramais
                             //e injeta no header do secondScreen
                             var ramal = $('#txtPrivateIdentity').val();
+
+                            // $('#localRamal').html(ramal);
 
                             $ramalCopy = $('.usersDiv')
                                 .find('.user')
@@ -882,7 +894,7 @@
                         }
                         btnHoldResume.value = 'Resume';
                         btnHoldResume.disabled = false;
-                        txtCallStatus.innerHTML = '<i>Call placed on hold</i>';
+                        txtCallStatus.innerHTML = '<i>Atender placed on hold</i>';
                         oSipSessionCall.bHeld = true;
                     }
                     break;
@@ -903,7 +915,7 @@
                         oSipSessionCall.bTransfering = false;
                         btnHoldResume.value = 'Hold';
                         btnHoldResume.disabled = false;
-                        txtCallStatus.innerHTML = '<i>Call taken off hold</i>';
+                        txtCallStatus.innerHTML = '<i>Atender taken off hold</i>';
                         oSipSessionCall.bHeld = false;
 
                         if (SIPml.isWebRtc4AllSupported()) { // IE don't provide stream callback yet
@@ -940,14 +952,14 @@
             case 'o_ect_trying':
                 {
                     if(e.session == oSipSessionCall){
-                        txtCallStatus.innerHTML = '<i>Call transfer in progress...</i>';
+                        txtCallStatus.innerHTML = '<i>Atender transfer in progress...</i>';
                     }
                     break;
                 }
             case 'o_ect_accepted':
                 {
                     if(e.session == oSipSessionCall){
-                        txtCallStatus.innerHTML = '<i>Call transfer accepted</i>';
+                        txtCallStatus.innerHTML = '<i>Atender transfer accepted</i>';
                     }
                     break;
                 }
@@ -955,7 +967,7 @@
             case 'i_ect_completed':
                 {
                     if(e.session == oSipSessionCall){
-                        txtCallStatus.innerHTML = '<i>Call transfer completed</i>';
+                        txtCallStatus.innerHTML = '<i>Atender transfer completed</i>';
                         btnTransfer.disabled = false;
                         if (oSipSessionTransferCall) {
                             oSipSessionCall = oSipSessionTransferCall;
@@ -968,7 +980,7 @@
             case 'i_ect_failed':
                 {
                     if(e.session == oSipSessionCall){
-                        txtCallStatus.innerHTML = '<i>Call transfer failed</i>';
+                        txtCallStatus.innerHTML = '<i>Atender transfer failed</i>';
                         btnTransfer.disabled = false;
                     }
                     break;
@@ -977,7 +989,7 @@
             case 'i_ect_notify':
                 {
                     if(e.session == oSipSessionCall){
-                        txtCallStatus.innerHTML = "<i>Call Transfer: <b>" + e.getSipResponseCode() + " " + e.description + "</b></i>";
+                        txtCallStatus.innerHTML = "<i>Atender Transfer: <b>" + e.getSipResponseCode() + " " + e.description + "</b></i>";
                         if (e.getSipResponseCode() >= 300) {
                             if (oSipSessionCall.bHeld) {
                                 oSipSessionCall.resume();
@@ -992,7 +1004,7 @@
                     if(e.session == oSipSessionCall){                        
                         var s_message = "Do you accept call transfer to [" + e.getTransferDestinationFriendlyName() + "]?";//FIXME
                         if (confirm(s_message)) {
-                            txtCallStatus.innerHTML = "<i>Call transfer in progress...</i>";
+                            txtCallStatus.innerHTML = "<i>Atender transfer in progress...</i>";
                             oSipSessionCall.acceptTransfer();
                             break;
                         }

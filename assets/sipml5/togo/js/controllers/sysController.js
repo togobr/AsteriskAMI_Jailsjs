@@ -66,6 +66,35 @@ $(function() {
                 });
                  
             })
+            .on('asterisk callstatus', function(call) {
+                console.log('foo callStatus', call);
+                $('#ramalSrc').html(call.callerid1);
+                $('#ramalDest').html(call.callerid2);
+
+                var myInterval = setInterval(
+                    function(){
+                        var $secondelement = $('#secondelement'),
+                            $minuteelement = $('#minuteelement'),
+                            $hourelement = $('#hourelement');
+
+                        secondcounter = secondcounter + 1;
+                        $secondelement.html(secondcounter);
+                            if ( (secondcounter%60) == 0) {
+                                minutecounter = minutecounter + 1;
+                                $minuteelement.html(minutecounter);
+                                if ( (minutecounter%60) == 0) {
+                                    hourcounter = hourcounter + 1;
+                                    $hourelement.html(hourcounter);
+                                }
+                            }
+                    },1000
+                );
+
+                if(call.bridgestate !== "Link"){
+                    clearInterval(myInterval);
+                    console.log('foo call.bridgestate', call.bridgestate);
+                }
+            })
             /*.on('show result', function(result) {
                 console.log('SHOWING RESULT:', result);
             })*/;

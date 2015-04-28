@@ -32,7 +32,7 @@ module.exports.bootstrap = function(cb) {
     })
     // evento que dispara quando é enviado a action de SIPpeers (SocketController.js)
     .on('peerentry', function(evt) {
-    	peer_list[evt.objectname] = {
+        peer_list[evt.objectname] = {
             objectname: evt.objectname,
             ipport: evt.ipport,
             ipaddress: evt.ipaddress
@@ -42,6 +42,14 @@ module.exports.bootstrap = function(cb) {
         //dispara evento para o front
         sails.io.sockets.emit('get peers', peer_list);
     })
+    .on('bridge', function(evt) { //Colhe qualquer evento que acontecer no Asterisk.
+        sails.io.sockets.emit('asterisk callstatus', {
+            bridgestate: evt.bridgestate,
+            callerid1: evt.callerid1,
+            callerid2: evt.callerid2
+        });
+    })
+
     /*.on('anyeventhere', function(result) {
         sails.io.sockets.emit('show result', result);
     })*/;

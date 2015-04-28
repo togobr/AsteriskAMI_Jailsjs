@@ -265,39 +265,11 @@ ul, ol {
 			}
 		}
 		
-		.disconnectBtn{
+		input#btnUnRegister{
+			@include border-radius(0px);
 			position: absolute;
 			height: 100%;
-			width: 100px;
 			right: 0px;
-			cursor: pointer;
-			&.icon-exit{
-				&:before{
-					position: absolute;
-					color: #FFFFFF;
-					top: 50%;
-					left: 50%;
-					margin-top: -23px;
-					margin-left: -19px;
-					z-index: 1;
-					font-size: 50px;
-				}
-				&:hover{
-					&:before{
-						margin-top: -24px;
-						font-size: 52px;
-					}
-				}
-			}
-			input#btnUnRegister{
-				@include border-radius(0px);
-				height: 100%;
-				width: 100%;
-				background: #BA1433;
-				border: 0px;
-				opacity: 1;
-				cursor: pointer;
-			}
 		}
 	}
 
@@ -425,14 +397,19 @@ ul, ol {
 				top: 0px;
 				right: 20px;
 				width: 300px;
-				height: 95%;
 				background: #28282C;
 				border: 5px solid #FFFFFF;
 				border-top: 0;
 				text-align: center;
-				
+				padding: 10px 10px 10px 10px;
+				overflow: auto;
+
 				h3{
 					color: #FFFFFF;
+					margin-top: 20px;
+					&:first-child{
+						margin-top: 0px;
+					}
 				}
 				
 				span{
@@ -441,19 +418,28 @@ ul, ol {
 				}
 
 				#divBtnCallGroup{
+					position: relative;
+					height: 40px;
+					width: 100px;
 					margin: 0 auto;
-					text-align: center;
+					margin-top: 20px;
+					button{
+						@include border-radius(7px);
+						border: 1px solid #FFFFFF;
+						height: 100%;
+						width: 100%;
+						background: green;
+					}
 				}
 
 				#btnHangUp{
 					@include border-radius(7px);
-					position: absolute;
+					position: relative;
 					height: 120px;
 					width: 120px;
-					left: 50%;
-					margin-left: -60px;
-					bottom: 50px;
+					margin: 0 auto;
 					background: #BE2833;
+					margin-top: 20px;
 				}
 
 				&.inUse{
