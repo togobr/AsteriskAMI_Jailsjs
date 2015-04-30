@@ -362,13 +362,17 @@ ul, ol {
   margin-bottom: 30px;
 }
 /* line 120, sass/_system.scss */
+.firstScreen .fsRight .loginWrapper .inputBlock:last-child {
+  margin-bottom: 5px;
+}
+/* line 124, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .inputBlock h5 {
   position: relative;
   color: #FFFFFF;
   font-size: 14px;
   margin-bottom: 5px;
 }
-/* line 127, sass/_system.scss */
+/* line 131, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .inputBlock > div {
   position: relative;
   width: 100%;
@@ -376,7 +380,7 @@ ul, ol {
   font-size: 1.5em;
   display: table;
 }
-/* line 134, sass/_system.scss */
+/* line 138, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .inputBlock > div span {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -392,11 +396,11 @@ ul, ol {
   vertical-align: middle;
   font-size: 1.3em;
 }
-/* line 144, sass/_system.scss */
+/* line 148, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .inputBlock > div span.icon-lock {
   padding-left: 12px;
 }
-/* line 148, sass/_system.scss */
+/* line 152, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .inputBlock > div input {
   position: absolute;
   width: 85%;
@@ -408,39 +412,39 @@ ul, ol {
   font-size: 14px;
   padding-left: 5px;
 }
-/* line 158, sass/_system.scss */
+/* line 162, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .inputBlock > div input:focus {
   -webkit-box-shadow: 0px 5px 0px 0px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 5px 0px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 5px 0px 0px rgba(50, 50, 50, 0.75);
 }
-/* line 165, sass/_system.scss */
+/* line 169, sass/_system.scss */
 .firstScreen .fsRight .loginWrapper .avancadoLink {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
   display: block;
   text-decoration: underline;
 }
-/* line 173, sass/_system.scss */
+/* line 177, sass/_system.scss */
 .firstScreen .fsLeft {
   position: absolute;
   height: 100%;
   width: 50%;
 }
-/* line 177, sass/_system.scss */
+/* line 181, sass/_system.scss */
 .firstScreen .fsLeft img {
   width: 100%;
   height: 100%;
 }
 
-/* line 186, sass/_system.scss */
+/* line 190, sass/_system.scss */
 .secondScreen {
   position: relative;
   background: #293733;
   height: 100%;
   width: 100%;
 }
-/* line 192, sass/_system.scss */
+/* line 196, sass/_system.scss */
 .secondScreen .lockScreen {
   position: absolute;
   height: 100%;
@@ -450,7 +454,7 @@ ul, ol {
   z-index: 10;
   display: none;
 }
-/* line 200, sass/_system.scss */
+/* line 204, sass/_system.scss */
 .secondScreen .lockScreen .icon-lock {
   position: absolute;
   width: 300px;
@@ -462,7 +466,7 @@ ul, ol {
   color: #FFFFFF;
   text-align: center;
 }
-/* line 210, sass/_system.scss */
+/* line 214, sass/_system.scss */
 .secondScreen .lockScreen .icon-lock:before {
   font-size: 200px;
   padding-left: 75px;
@@ -470,11 +474,11 @@ ul, ol {
   display: block;
   margin-bottom: 20px;
 }
-/* line 217, sass/_system.scss */
+/* line 221, sass/_system.scss */
 .secondScreen .lockScreen .icon-lock span {
   font-size: 18px;
 }
-/* line 223, sass/_system.scss */
+/* line 227, sass/_system.scss */
 .secondScreen .ssHeader {
   position: relative;
   width: 100%;
@@ -483,34 +487,34 @@ ul, ol {
   border-top: 5px solid #FFFFFF;
   border-bottom: 5px solid #FFFFFF;
 }
-/* line 230, sass/_system.scss */
+/* line 234, sass/_system.scss */
 .secondScreen .ssHeader ul {
   position: absolute;
   top: 20%;
 }
-/* line 233, sass/_system.scss */
+/* line 237, sass/_system.scss */
 .secondScreen .ssHeader ul li {
   display: inline-block;
   font-size: 50px;
   margin-left: 20px;
 }
-/* line 238, sass/_system.scss */
+/* line 242, sass/_system.scss */
 .secondScreen .ssHeader ul li.userStatus {
   color: #DA5656;
 }
-/* line 240, sass/_system.scss */
+/* line 244, sass/_system.scss */
 .secondScreen .ssHeader ul li.userStatus.online {
   color: #75AF62;
 }
-/* line 244, sass/_system.scss */
+/* line 248, sass/_system.scss */
 .secondScreen .ssHeader ul li.ramalNumber {
   color: #FFFFFF;
 }
-/* line 247, sass/_system.scss */
+/* line 251, sass/_system.scss */
 .secondScreen .ssHeader ul .icon.chat, .secondScreen .ssHeader ul .icon.video, .secondScreen .ssHeader ul .icon.audio {
   display: none;
 }
-/* line 252, sass/_system.scss */
+/* line 256, sass/_system.scss */
 .secondScreen .ssHeader .header_callStatus {
   position: absolute;
   height: 100%;
@@ -522,12 +526,12 @@ ul, ol {
   padding: 20px 0px 10px 0px;
   color: #FFFFFF;
 }
-/* line 262, sass/_system.scss */
+/* line 266, sass/_system.scss */
 .secondScreen .ssHeader .header_callStatus label#txtCallStatus {
   margin-top: 10px;
   color: #FFFFFF;
 }
-/* line 268, sass/_system.scss */
+/* line 272, sass/_system.scss */
 .secondScreen .ssHeader input#btnUnRegister {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -536,12 +540,12 @@ ul, ol {
   height: 100%;
   right: 0px;
 }
-/* line 276, sass/_system.scss */
+/* line 280, sass/_system.scss */
 .secondScreen .wrapper {
   position: relative;
   height: 77%;
 }
-/* line 280, sass/_system.scss */
+/* line 284, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft {
   position: relative;
   width: 210px;
@@ -551,7 +555,7 @@ ul, ol {
   border-right: 1px solid #FFFFFF;
   z-index: 2;
 }
-/* line 289, sass/_system.scss */
+/* line 293, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft h2 {
   text-align: center;
   color: #FFFFFF;
@@ -559,80 +563,80 @@ ul, ol {
   border-top: 1px solid #FFFFFF;
   padding-top: 4px;
 }
-/* line 297, sass/_system.scss */
+/* line 301, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv {
   height: 100%;
   overflow: auto;
 }
-/* line 301, sass/_system.scss */
+/* line 305, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user {
   position: relative;
   background: #41594A;
   height: 50px;
 }
-/* line 305, sass/_system.scss */
+/* line 309, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user:hover {
   background: #516B5B;
 }
-/* line 309, sass/_system.scss */
+/* line 313, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul {
   display: table;
   margin-top: 5px;
   width: 100%;
   height: 100%;
 }
-/* line 315, sass/_system.scss */
+/* line 319, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li {
   color: #BCBCBC;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 321, sass/_system.scss */
+/* line 325, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.icon {
   text-align: center;
   font-size: 20px;
   cursor: pointer;
 }
-/* line 326, sass/_system.scss */
+/* line 330, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.icon i:hover {
   color: #838383;
 }
-/* line 329, sass/_system.scss */
+/* line 333, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.icon i:active {
   color: #B8B8B8;
 }
-/* line 335, sass/_system.scss */
+/* line 339, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.ramalNumber {
   font-weight: bold;
   color: #FFFFFF;
 }
-/* line 340, sass/_system.scss */
+/* line 344, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .ramalNumber {
   text-align: center;
   width: 60px;
 }
-/* line 345, sass/_system.scss */
+/* line 349, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .userStatus {
   text-align: center;
   font-size: 20px;
   color: #DA5656;
 }
-/* line 350, sass/_system.scss */
+/* line 354, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .userStatus.online {
   color: #75AF62;
 }
-/* line 354, sass/_system.scss */
+/* line 358, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .userStatus.emUso {
   color: #FFAE00;
 }
-/* line 363, sass/_system.scss */
+/* line 367, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight {
   position: relative;
   height: 100%;
   width: 100%;
   padding-left: 210px;
 }
-/* line 369, sass/_system.scss */
+/* line 373, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chat {
   position: relative;
   width: 50%;
@@ -641,28 +645,28 @@ ul, ol {
   margin: 0 auto;
   display: none;
 }
-/* line 376, sass/_system.scss */
+/* line 380, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chat .blockInputMsg {
   position: absolute;
   width: 100%;
   height: 30px;
   bottom: 0;
 }
-/* line 381, sass/_system.scss */
+/* line 385, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chat .blockInputMsg input {
   width: 90%;
   float: left;
 }
-/* line 385, sass/_system.scss */
+/* line 389, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chat .blockInputMsg span {
   width: 10%;
   float: left;
 }
-/* line 388, sass/_system.scss */
+/* line 392, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chat .blockInputMsg span button {
   width: 100%;
 }
-/* line 395, sass/_system.scss */
+/* line 399, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus {
   position: absolute;
   top: 0px;
@@ -675,21 +679,21 @@ ul, ol {
   padding: 10px 10px 10px 10px;
   overflow: auto;
 }
-/* line 407, sass/_system.scss */
+/* line 411, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus h3 {
   color: #FFFFFF;
   margin-top: 20px;
 }
-/* line 410, sass/_system.scss */
+/* line 414, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus h3:first-child {
   margin-top: 0px;
 }
-/* line 415, sass/_system.scss */
+/* line 419, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus span {
   color: #FFFFFF;
   font-weight: bold;
 }
-/* line 420, sass/_system.scss */
+/* line 424, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus #divBtnCallGroup {
   position: relative;
   height: 40px;
@@ -697,7 +701,7 @@ ul, ol {
   margin: 0 auto;
   margin-top: 20px;
 }
-/* line 426, sass/_system.scss */
+/* line 430, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus #divBtnCallGroup button {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -707,7 +711,7 @@ ul, ol {
   width: 100%;
   background: green;
 }
-/* line 435, sass/_system.scss */
+/* line 439, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus #btnHangUp {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -719,7 +723,7 @@ ul, ol {
   background: #BE2833;
   margin-top: 20px;
 }
-/* line 450, sass/_system.scss */
+/* line 454, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .headerLeft {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -729,14 +733,14 @@ ul, ol {
   width: 100%;
   height: 150px;
 }
-/* line 457, sass/_system.scss */
+/* line 461, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .headerLeft .localVideo {
   float: left;
   width: 280px;
   height: 100%;
   text-align: center;
 }
-/* line 462, sass/_system.scss */
+/* line 466, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .headerLeft .localVideo video {
   width: 268px;
   height: 124px;
@@ -744,7 +748,7 @@ ul, ol {
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 2s;
 }
-/* line 472, sass/_system.scss */
+/* line 476, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .remoteVideo {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -755,13 +759,13 @@ ul, ol {
   background: #FFFFFF;
   margin-top: 15px;
 }
-/* line 479, sass/_system.scss */
+/* line 483, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .remoteVideo video {
   background-color: #000000;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 2s;
 }
-/* line 490, sass/_system.scss */
+/* line 494, sass/_system.scss */
 .secondScreen .footer {
   position: absolute;
   bottom: 0px;

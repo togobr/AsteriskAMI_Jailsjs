@@ -117,6 +117,10 @@ ul, ol {
 			margin: 0 auto;
 			margin-bottom: 30px;
 
+			&:last-child{
+				margin-bottom: 5px;
+			}
+
 			h5{
 				position: relative;
 				color: #FFFFFF;
@@ -163,7 +167,7 @@ ul, ol {
 		}
 
 		.avancadoLink{
-			margin-top: 20px;
+			margin-top: 0px;
 			text-align: center;
 			display: block;
 			text-decoration: underline
