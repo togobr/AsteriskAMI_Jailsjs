@@ -452,7 +452,6 @@ ul, ol {
   background: #000000;
   opacity: 0.8;
   z-index: 10;
-  display: none;
 }
 /* line 204, sass/_system.scss */
 .secondScreen .lockScreen .icon-lock {
