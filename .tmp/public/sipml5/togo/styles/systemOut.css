@@ -774,6 +774,11 @@ ul, ol {
   border-top: 5px solid #FFFFFF;
 }
 
+/* line 508, sass/_system.scss */
+#divCallCtrl {
+  display: none !important;
+}
+
 /* line 1, sass/_index.scss */
 .navbar-inner-red {
   background-color: #600000;
