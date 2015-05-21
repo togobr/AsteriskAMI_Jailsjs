@@ -39,6 +39,7 @@
     <script src="sipml5/togo/js/lib/backbone.js"></script>
     <script src="sipml5/togo/js/lib/mustache.js"></script>
     <script src="sipml5/togo/js/views/UserView.js"></script>
+    <script src="sipml5/togo/js/views/ChatView.js"></script>
 
     <script src="sipml5/togo/js/controllers/sysController.js"></script>
 
@@ -250,6 +251,14 @@
             <li class="icon chat"> <i class="fa fa-weixin"></i> </li>
         </ul>
     </script>
+
+    <div id="chatView" class="chatView" style="display:none;">
+        <div class="messages"></div>
+        <form>
+            <input type="text">
+            <button type="submit">enviar</button>
+        </form>
+    </div>
 
     <!-- Glass Panel -->
     <div id='divGlassPanel' class='glass-panel' style='visibility:hidden'></div>

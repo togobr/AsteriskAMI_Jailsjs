@@ -452,6 +452,7 @@ ul, ol {
   background: #000000;
   opacity: 0.8;
   z-index: 10;
+  display: none;
 }
 /* line 204, sass/_system.scss */
 .secondScreen .lockScreen .icon-lock {
@@ -777,6 +778,46 @@ ul, ol {
 /* line 508, sass/_system.scss */
 #divCallCtrl {
   display: none !important;
+}
+
+/* line 513, sass/_system.scss */
+.chatView {
+  border: 1px solid black;
+  padding: 20px;
+  position: absolute;
+  top: 500px;
+  left: 200px;
+  background: grey;
+  z-index: 999999;
+}
+/* line 522, sass/_system.scss */
+.chatView .messages {
+  border: 1px solid red;
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+  background: white;
+  overflow: auto;
+}
+/* line 530, sass/_system.scss */
+.chatView .messages .message {
+  margin: 1px;
+  border: 1px solid grey;
+  background: white;
+  min-height: 50px;
+}
+/* line 536, sass/_system.scss */
+.chatView .messages .message .ramal {
+  display: block;
+  float: left;
+  font-size: 15px;
+  background: grey;
+  color: white;
+  padding: 5px;
+}
+/* line 545, sass/_system.scss */
+.chatView .messages .message > .text {
+  color: grey;
 }
 
 /* line 1, sass/_index.scss */

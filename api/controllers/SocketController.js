@@ -18,5 +18,17 @@ module.exports = {
         }, function(err, result) {
         	return res.json(result);
         });
+	},
+
+	message: function(req, res) {
+		var from = req.param('from'),
+			to = req.param('to'),
+			message = req.param('message');
+
+		sails.io.sockets.emit('message', {
+			from: from,
+			to: to,
+			message: message
+		});
 	}
 };

@@ -23,6 +23,8 @@ var UserView = Backbone.View.extend({
             ramalEmUso: false
         };
 
+        this.chatView = null;
+
         this.template = $('#userTemplate').html();
     },
 
@@ -72,12 +74,19 @@ var UserView = Backbone.View.extend({
             this.callStatus($el);
     },
 
-    openChat: function() {
+    openChat: function(ramal) {
         var $el = $(this.el),
             x = $el.find('ul'),
-            data = x.attr('data-ramal');
+            ramal = $.isNumeric(ramal) ? ramal : x.attr('data-ramal');
 
-        window.alert("Abrindo comunicação de CHAT para o ramal "+data);
+        /*window.alert("Abrindo comunicação de CHAT para o ramal "+data);*/
+        if (!this.chatView) {
+            console.log('sddsds', this.chatView, ramal);
+            this.chatView = new ChatView(ramal);
+            this.chatView.$el.show().prependTo('body');
+        }
+
+        return this.chatView;
     },
 
     callStatus: function(user){

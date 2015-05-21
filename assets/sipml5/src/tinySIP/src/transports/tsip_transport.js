@@ -357,6 +357,7 @@ function __tsip_transport_ws_start(o_self) {
              tsk_string_format("{0}://{1}:{2}",o_self.s_protocol, o_self.s_host, o_self.i_port) : o_self.o_stack.network.s_websocket_server_url;
     tsk_utils_log_info("Connecting to '"+s_url+"'");
     o_self.o_ws = new WebSocket(s_url, 'sip');
+    console.log('foo s_url',  s_url);
     o_self.o_ws.binaryType = "arraybuffer";
     o_self.o_ws.o_transport = o_self;
     o_self.o_ws.onopen = __tsip_transport_ws_onopen;

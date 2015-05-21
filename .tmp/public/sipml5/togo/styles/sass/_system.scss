@@ -200,7 +200,7 @@ ul, ol {
 		background: #000000;
 		opacity: 0.8;
 		z-index: 10;
-		// display: none;
+		display: none;
 		.icon-lock{
 			position: absolute;
 			width: 300px;
@@ -507,4 +507,44 @@ ul, ol {
 
 #divCallCtrl{
 	display: none !important;
+}
+
+// CHATVIEW
+.chatView {
+	border: 1px solid black;
+	padding: 20px;
+	position: absolute;
+	top: 500px;
+	left: 200px;
+	background: grey;
+	z-index: 999999;
+
+	.messages {
+		border: 1px solid red;
+		padding: 10px;
+		width: 200px;
+		height: 300px;
+		background: white;
+		overflow: auto;
+
+		.message {
+			margin: 1px;
+			border: 1px solid grey;
+			background: white;
+			min-height: 50px;
+
+			.ramal {
+				display: block;
+				float: left;
+				font-size: 15px;
+				background: grey;
+				color: white;
+				padding: 5px;
+			}
+
+			& > .text {
+				color: grey;
+			}
+		}
+	}
 }

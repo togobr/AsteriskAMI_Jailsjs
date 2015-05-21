@@ -10,15 +10,15 @@
  */
 
 module.exports.bootstrap = function(cb) {
-
+    //200.135.233.35 - asterisk remoto
 	var AsteriskManager = require('asterisk-manager'),
-        ami = new AsteriskManager('5038','200.135.233.35','admin','1234', true),
+        ami = new AsteriskManager('5038','192.168.25.37','admin','1234', true),
         peer_list = {};
 
     ami.keepConnected();
 
     ami
-    .on('managerevent', function(evt) { //Colhe qualquer evento que acontecer no Asterisk.
+    .on('managerevent', function(evt) { //captura qualquer evento que acontecer no Asterisk.
         // console.log('managerevent', evt);
     })
     // é disparado quando algum usuário connecta no asterisk
@@ -42,7 +42,7 @@ module.exports.bootstrap = function(cb) {
         //dispara evento para o front
         sails.io.sockets.emit('get peers', peer_list);
     })
-    .on('bridge', function(evt) { //Colhe qualquer evento que acontecer no Asterisk.
+    .on('bridge', function(evt) { 
         sails.io.sockets.emit('asterisk callstatus', {
             bridgestate: evt.bridgestate,
             callerid1: evt.callerid1,

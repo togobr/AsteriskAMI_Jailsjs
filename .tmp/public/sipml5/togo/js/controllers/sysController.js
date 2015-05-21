@@ -1,3 +1,4 @@
+window.userViews = {};
 $(function() {
     // STATUS CODES
     /*-1 = Extension not found
@@ -57,6 +58,7 @@ $(function() {
                 // e guarda em user_views
                 $.each(peers, function(k, peer) {
                     var user_view = new UserView();
+                    userViews[peer.objectname] = (user_view);
 
                     user_view.setPeer(peer);
                     user_views[peer.objectname] = user_view;
@@ -96,6 +98,17 @@ $(function() {
                     console.log('foo call.bridgestate123', call.bridgestate);
                 }
 
+            })
+            .on('message', function(data) {
+                var my_ramal = $('#txtPrivateIdentity').val();
+                console.log('fooooo received message', data, my_ramal);
+                if (my_ramal == data.from) {
+                    userViews[data.to].openChat(data.to).newMessage(data.from, data.message);
+                    return;
+                }
+                if (data.to != my_ramal) return;
+
+                userViews[data.from].openChat(data.from).newMessage(data.from, data.message);
             })
             /*.on('show result', function(result) {
                 console.log('SHOWING RESULT:', result);
