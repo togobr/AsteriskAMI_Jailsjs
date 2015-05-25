@@ -16,7 +16,8 @@ var ChatView = Backbone.View.extend({
         var self = this,
             ramal = this.ramal,
             input = this.$el.find('input'),
-            message = input.val();
+            message = input.val(),
+            id = this.$el.attr('id');
 
         event.preventDefault();  // cancela a submissao do formulario
         input.val('');
@@ -27,7 +28,19 @@ var ChatView = Backbone.View.extend({
             message: message
         });
 
+        $('.user')
+            .find("[data-ramal='" + ramal + "']")
+            .parent()
+            .removeClass('alertMessage');
+
         return false;
+    },
+
+    removeAlert: function(){
+        var id = this.$el.attr('id');
+            ramal = id.split("-").pop();
+        
+        $('.user').find("[data-ramal='" + ramal + "']").removeClass('alertMessage');
     },
 
     newMessage: function(ramal, message) {

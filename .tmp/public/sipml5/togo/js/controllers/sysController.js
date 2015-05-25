@@ -108,6 +108,7 @@ $(function() {
                 }
                 if (data.to != my_ramal) return;
 
+                $('.user').find("[data-ramal='" + data.from + "']").parent().addClass('alertMessage');
                 userViews[data.from].openChat(data.from).newMessage(data.from, data.message);
             })
             /*.on('show result', function(result) {

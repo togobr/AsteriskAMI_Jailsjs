@@ -305,7 +305,18 @@ ul, ol {
 				.user{
 					position: relative;
 					background: #41594A;
-					height: 50px;	
+					height: 50px;
+					&.alertMessage{
+						.icon.chat:before{
+							content: "!";
+							position: absolute;
+							color: #FFF200;
+							right: 0px;
+							top: 0px;
+							font-weight: bold;
+						}
+					}
+
 					&:hover{
 						background: #516B5B;
 					}
@@ -370,39 +381,94 @@ ul, ol {
 			width: 100%;
 			padding-left: 210px;
 
-			.chat{
+			.chatWrapper{
 				position: relative;
-				width: 50%;
+				float: left;
+				width: 80%;
 				height: 100%;
-				background: #41594A;
-				margin: 0 auto;
-				display: none;
-				.blockInputMsg{
-					position: absolute;
+
+				.chatHeader{
+					position: relative;
+					height: 100px;
 					width: 100%;
-					height: 30px;
-					bottom: 0;
-					input{
-						width: 90%;
-						float: left;
-					}
-					span{
-						width: 10%;
-						float: left;
-						button{
+					text-align: center;
+					background: #293733;
+					color: #FFFFFF;
+				}
+
+				.chatView {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					padding: 5px;
+					float: left;
+					z-index: 10;
+					
+					.messages {
+						border: 1px solid #000000;
+						padding: 10px;
+						width: 100%;
+						height: 95%;
+						background: white;
+						overflow: auto;
+
+						.message {
+							position: relative;
+							display: table;
 							width: 100%;
+							height: 30px;
+							margin: 1px;
+							border: 1px solid grey;
+							background: white;
+
+							.ramal {
+								height: 100%;
+								display: table-cell;
+								font-size: 15px;
+								background: #293733;
+								color: white;
+								vertical-align: middle;
+								text-align: center;
+							}
+
+							& > .text {
+								display: table-cell;
+								color: grey;
+								width: 95%;
+								vertical-align: middle;
+								padding-left: 10px;
+							}
 						}
 					}
+
+					form{
+						position: relative;
+						height: 5%;
+						width: 100%;
+						input{
+							height: 100%;
+							width: 100%;
+							border-radius: 0px;
+						}
+						button{
+							position: absolute;
+							top: 0px;
+							right: 0px;
+							height: 100%;
+							width: 5%;
+						}
+					} 
 				}
 			}
 
 			.blockCallStatus{
-				position: absolute;
-				top: 0px;
-				right: 20px;
-				width: 300px;
+				position: relative;
+				float: left;
+				height: 100%;
+				width: 20%;
 				background: #28282C;
 				border: 5px solid #FFFFFF;
+				border-bottom: 0px;
 				border-top: 0;
 				text-align: center;
 				padding: 10px 10px 10px 10px;
@@ -507,44 +573,4 @@ ul, ol {
 
 #divCallCtrl{
 	display: none !important;
-}
-
-// CHATVIEW
-.chatView {
-	border: 1px solid black;
-	padding: 20px;
-	position: absolute;
-	top: 500px;
-	left: 200px;
-	background: grey;
-	z-index: 999999;
-
-	.messages {
-		border: 1px solid red;
-		padding: 10px;
-		width: 200px;
-		height: 300px;
-		background: white;
-		overflow: auto;
-
-		.message {
-			margin: 1px;
-			border: 1px solid grey;
-			background: white;
-			min-height: 50px;
-
-			.ramal {
-				display: block;
-				float: left;
-				font-size: 15px;
-				background: grey;
-				color: white;
-				padding: 5px;
-			}
-
-			& > .text {
-				color: grey;
-			}
-		}
-	}
 }

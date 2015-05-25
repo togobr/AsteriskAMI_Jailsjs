@@ -133,13 +133,8 @@
             </div>
 
             <div class="wrapperRight">
-                <div class="chat">
-                    <div class="blockInputMsg">
-                        <input class="inputMessage">
-                        <span>
-                            <button type="button">Enviar</button>
-                        </span>
-                    </div>     
+                <div class="chatWrapper">
+    
                 </div>
 
                 <div class="blockCallStatus">
@@ -243,7 +238,7 @@
 
     <!--Template para a lista de usuários-->
     <script id="userTemplate" type="text/template">
-        <ul data-ramal = "{{objectname}}" > 
+        <ul data-ramal = "{{objectname}}" class="hue"> 
             <li class="userStatus {{#ramalOnline}}online{{/ramalOnline}} {{#ramalEmUso}}emUso{{/ramalEmUso}}"><i class="fa fa-user"></i></li>
             <li class="ramalNumber">{{objectname}}</li> 
             <li class="icon video"> <i class="fa fa-video-camera"></i> </li> 
@@ -253,10 +248,12 @@
     </script>
 
     <div id="chatView" class="chatView" style="display:none;">
-        <div class="messages"></div>
+        <div class="messages">
+            <!-- <div class="chatHeader"></div> -->
+        </div>
         <form>
             <input type="text">
-            <button type="submit">enviar</button>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 

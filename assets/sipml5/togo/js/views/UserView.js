@@ -77,14 +77,20 @@ var UserView = Backbone.View.extend({
     openChat: function(ramal) {
         var $el = $(this.el),
             x = $el.find('ul'),
-            ramal = $.isNumeric(ramal) ? ramal : x.attr('data-ramal');
+            ramal = $.isNumeric(ramal) ? ramal : x.attr('data-ramal'), 
+            $chatView = $('.wrapperRight').find('#chatView-' + ramal);
 
-        /*window.alert("Abrindo comunicação de CHAT para o ramal "+data);*/
+        $('.chatView').css('z-index', '10');
+        
         if (!this.chatView) {
-            console.log('sddsds', this.chatView, ramal);
             this.chatView = new ChatView(ramal);
-            this.chatView.$el.show().prependTo('body');
+            this.chatView.$el
+                .show()
+                .prependTo('.chatWrapper')
+                .css('z-index', '100');
         }
+
+        $chatView.css('z-index', '100');
 
         return this.chatView;
     },
@@ -93,7 +99,6 @@ var UserView = Backbone.View.extend({
         var $blockCallStatus = $('.blockCallStatus');
             seconds = new Date().getSeconds();
 
-        $blockCallStatus.addClass('inUse');   
-        
+        $blockCallStatus.addClass('inUse');     
     }
 });
