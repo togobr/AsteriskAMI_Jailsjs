@@ -579,8 +579,8 @@ ul, ol {
   content: "!";
   position: absolute;
   color: #FFF200;
-  right: 0px;
-  top: 0px;
+  right: 8px;
+  top: 8px;
   font-weight: bold;
 }
 /* line 320, sass/_system.scss */

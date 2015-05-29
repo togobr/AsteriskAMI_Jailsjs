@@ -1,6 +1,7 @@
 var ChatView = Backbone.View.extend({
     events: {
-        "click button" : "submit"
+        "click button" : "submit",
+        "click .messages" : "removeAlert"
     },
 
     peer: null,
@@ -28,10 +29,10 @@ var ChatView = Backbone.View.extend({
             message: message
         });
 
-        $('.user')
-            .find("[data-ramal='" + ramal + "']")
-            .parent()
-            .removeClass('alertMessage');
+        // $('.user')
+        //     .find("[data-ramal='" + ramal + "']")
+        //     .parent()
+        //     .removeClass('alertMessage');
 
         return false;
     },
@@ -40,7 +41,12 @@ var ChatView = Backbone.View.extend({
         var id = this.$el.attr('id');
             ramal = id.split("-").pop();
         
-        $('.user').find("[data-ramal='" + ramal + "']").removeClass('alertMessage');
+        $('.usersDiv')
+            .find("[data-ramal='" + ramal + "']")
+            .parent()
+            .removeClass('alertMessage');
+            
+        console.log('foo aeaeaea', id, ramal);
     },
 
     newMessage: function(ramal, message) {
