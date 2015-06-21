@@ -45,8 +45,6 @@ var ChatView = Backbone.View.extend({
             .find("[data-ramal='" + ramal + "']")
             .parent()
             .removeClass('alertMessage');
-            
-        console.log('foo aeaeaea', id, ramal);
     },
 
     newMessage: function(ramal, message) {

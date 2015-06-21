@@ -12,7 +12,7 @@
 module.exports.bootstrap = function(cb) {
     //200.135.233.35 - asterisk remoto
 	var AsteriskManager = require('asterisk-manager'),
-        ami = new AsteriskManager('5038','localhost','admin','1234', true),
+        ami = new AsteriskManager('5038','177.96.170.56','admin','1234', true),
         peer_list = {};
 
     ami.keepConnected();

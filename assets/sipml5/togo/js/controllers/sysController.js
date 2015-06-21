@@ -31,6 +31,7 @@ $(function() {
                 io.socket.get('/socket/getPeers', function(peer) {
                     console.log('retorno de /socket/getPeers', peer);
                 });
+                 
             })
             // recebido informações do backend. É disparado quando algum usuário connecta no asterisk
             .on('asterisk connected', function(participant) {
