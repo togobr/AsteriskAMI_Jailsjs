@@ -9,7 +9,7 @@ module.exports = {
 	index: function(req, res) {
 		return res.json({});
 	},
-
+ 
 	getPeers: function(req, res) {
 		var ami = sails.config.globals.ami;
 

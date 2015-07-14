@@ -842,6 +842,67 @@ ul, ol {
   display: none !important;
 }
 
+@media screen and (max-width: 480px) {
+  /* line 4, sass/_mediaQuery.scss */
+  .firstScreen:after, .firstScreen:before {
+    content: none;
+  }
+  /* line 7, sass/_mediaQuery.scss */
+  .firstScreen .fsLeft {
+    width: 0;
+  }
+  /* line 10, sass/_mediaQuery.scss */
+  .firstScreen .fsRight {
+    width: 100%;
+  }
+
+  /* line 17, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperLeft {
+    width: 100%;
+    float: initial;
+  }
+  /* line 21, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight {
+    padding: 0;
+  }
+  /* line 23, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight .chatWrapper {
+    display: none;
+  }
+  /* line 26, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight .blockCallStatus {
+    width: 100%;
+  }
+  /* line 33, sass/_mediaQuery.scss */
+  .secondScreen .ssHeader input#btnUnRegister {
+    position: absolute;
+    height: 40%;
+    right: 0px;
+    width: 100%;
+    bottom: 0;
+  }
+  /* line 41, sass/_mediaQuery.scss */
+  .secondScreen .ssHeader .header_callStatus {
+    width: auto;
+    height: auto;
+    right: 0px;
+    margin-left: auto;
+    font-size: 20px;
+  }
+  /* line 49, sass/_mediaQuery.scss */
+  .secondScreen .ssHeader .user {
+    position: absolute;
+  }
+  /* line 51, sass/_mediaQuery.scss */
+  .secondScreen .ssHeader .user ul {
+    position: relative;
+    top: auto;
+  }
+  /* line 59, sass/_mediaQuery.scss */
+  .secondScreen .footer {
+    display: none;
+  }
+}
 /* line 1, sass/_index.scss */
 .navbar-inner-red {
   background-color: #600000;
@@ -942,7 +1003,7 @@ ul, ol {
   -o-transition-duration: 2s;
 }
 
-/* line 11, sass/systemOut.scss */
+/* line 12, sass/systemOut.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

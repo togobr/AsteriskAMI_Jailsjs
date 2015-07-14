@@ -74,9 +74,6 @@ $(function() {
                 $('#ramalSrc').html(call.callerid1);
                 $('#ramalDest').html(call.callerid2);
 
-
-                myInterval = setInterval(clock, 1000);
-
                 function clock() {
                   var $secondelement = $('#secondelement'),
                         $minuteelement = $('#minuteelement'),
@@ -97,6 +94,8 @@ $(function() {
                 if(call.bridgestate !== "Link"){
                     clearInterval(myInterval);
                     console.log('foo call.bridgestate123', call.bridgestate);
+                }else{
+                    myInterval = setInterval(clock, 1000);
                 }
 
             })
