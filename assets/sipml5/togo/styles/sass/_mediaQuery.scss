@@ -1,5 +1,8 @@
 @media screen and (max-width:320px) { }
 @media screen and (max-width:480px) {
+
+//========================== FIRST SCREEN ==========================
+
 	.firstScreen{
 		&:after, &:before{
 			content: none;
@@ -9,25 +12,13 @@
 		}
 		.fsRight{
 			width: 100%;
+			border-left: 0;
 		}
 	}
 
+//========================== SECOND SCREEN ==========================
+
 	.secondScreen{
-		.wrapper{
-			.wrapperLeft{
-				width: 100%;
-				float: initial;
-			}
-			.wrapperRight{
-				padding: 0;
-				.chatWrapper{
-					display: none;
-				}
-				.blockCallStatus{
-					width: 100%;
-				}
-			}
-		}
 
 		.ssHeader{
 			input#btnUnRegister{
@@ -39,22 +30,47 @@
 			}
 
 			.header_callStatus{
-				width: auto;
-				height: auto;
-				right: 0px;
-				margin-left: auto;
+				position: relative;
+				float: left;
+				left: auto;
+				width: 60%;
 				font-size: 20px;
+				margin-left: 0;
 			}
 			
-			.user{
-				position: absolute;
-				ul{
-					position: relative;
-					top: auto;
+			.userUl{
+				position: relative;
+				float: left;
+				top: 22px;
+				width: 40%;
+				.userStatus, .ramalNumber{
+					font-size: 30px;
+					margin-left: 10px;
 				}
 			}
 		}
 		
+		.wrapper{
+			.wrapperLeft{
+				width: 100%;
+				float: initial;
+			}
+			.wrapperRight{
+				padding: 0;
+				.chatWrapper{
+					width: 100%;
+					padding: 0;
+					.chatView form button{
+						width: 20%;
+					}
+				}
+				.blockCallStatus{
+					position: absolute;
+					width: 100%;
+					border: 0px;
+				}
+			}
+		}
 
 		.footer{
 			display: none;

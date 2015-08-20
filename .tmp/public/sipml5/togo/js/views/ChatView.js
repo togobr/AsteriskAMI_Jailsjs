@@ -1,7 +1,8 @@
 var ChatView = Backbone.View.extend({
     events: {
         "click button" : "submit",
-        "click .messages" : "removeAlert"
+        "click .messages" : "removeAlert",
+        "click .chatView form input" : "removeAlert"
     },
 
     peer: null,
@@ -29,10 +30,11 @@ var ChatView = Backbone.View.extend({
             message: message
         });
 
-        // $('.user')
-        //     .find("[data-ramal='" + ramal + "']")
-        //     .parent()
-        //     .removeClass('alertMessage');
+        //remove alerta de recebimento de mensagem, ao dar submit
+        $('.usersDiv')
+            .find("[data-ramal='" + ramal + "']")
+            .parent()
+            .removeClass('alertMessage');
 
         return false;
     },

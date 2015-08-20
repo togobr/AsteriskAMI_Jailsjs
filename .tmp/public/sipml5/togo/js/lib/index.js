@@ -328,6 +328,16 @@
             scrollTop: 0
         }, 800)
 
+        //re insere o ramal que estava online no header, de volta para a lista
+        var ramal = $('#txtPrivateIdentity').val();
+
+        $ramalCopy = $('.usersDiv')
+            .find('.user')
+            .find("[data-ramal='" + ramal + "']");
+
+        $ramalCopy.parent().show();
+        //re insere o ramal que estava online no header, de volta para a lista ------ final
+
         $(".ssHeader ul" ).remove();
         $(".lockScreen").show();
     }
@@ -766,13 +776,14 @@
                             //e injeta no header do secondScreen
                             var ramal = $('#txtPrivateIdentity').val();
 
-                            // $('#localRamal').html(ramal);
-
                             $ramalCopy = $('.usersDiv')
                                 .find('.user')
                                 .find("[data-ramal='" + ramal + "']");
 
-                            $('.ssHeader').append($ramalCopy.parent());
+                            $('.ssHeader').find('.userUl').remove();
+
+                            $ramalCopy.clone().prependTo('.ssHeader');
+                            $ramalCopy.parent().hide();
                             console.log('foo togo', $ramalCopy);
                             $('.lockScreen').hide();
                         }

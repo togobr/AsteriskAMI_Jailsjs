@@ -199,8 +199,8 @@ ul, ol {
 		width: 100%;
 		background: #000000;
 		opacity: 0.8;
-		z-index: 10;
-		display: none;
+		z-index: 9999;
+		// display: none;
 		.icon-lock{
 			position: absolute;
 			width: 300px;
@@ -289,6 +289,7 @@ ul, ol {
 			padding: 10px 3px 0px 3px;
 			border-right: 1px solid #FFFFFF;
 			z-index: 2;
+			overflow: hidden;
 
 			h2{
 				text-align: center;

@@ -63,6 +63,10 @@ var UserView = Backbone.View.extend({
             $id_txtPhoneNumber = $('#txtPhoneNumber'),
             $remoteRamal = $('#remoteRamal');
 
+            //realizar a troca tela de chat em versão mobile pelo do bloco de status.
+            $('.chatWrapper').css('z-index', '0');
+            $('.blockCallStatus').css('z-index', '10');
+
             //para não mudar muito a estrutura original do sipML5, foi pego o número do ramal 
             //e setado no input #txtPhoneNumber que o próprio sipML5 trata.
             $id_txtPhoneNumber.val(data);
@@ -80,7 +84,10 @@ var UserView = Backbone.View.extend({
             ramal = $.isNumeric(ramal) ? ramal : x.attr('data-ramal'), 
             $chatView = $('.wrapperRight').find('#chatView-' + ramal);
 
-        $('.chatView').css('z-index', '10');
+        //realizar a troca do bloco de status pela tela de chat em versão mobile.
+        $('.blockCallStatus').css('z-index', '0');
+        $('.chatWrapper').css('z-index', '10');
+         $('.chatView').css('z-index', '10');
         
         if (!this.chatView) {
             this.chatView = new ChatView(ramal);

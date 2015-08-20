@@ -70,9 +70,19 @@ $(function() {
                  
             })
             .on('asterisk callstatus', function(call) {
+                var ramal = $('#txtPrivateIdentity').val();
                 console.log('foo callStatus', call);
                 $('#ramalSrc').html(call.callerid1);
                 $('#ramalDest').html(call.callerid2);
+
+                console.log('foo callstatus44: ', call.callerid1, call.callerid2, ramal);
+
+                secondcounter = 0;
+                minutecounter = 0;
+                hourcounter = 0;
+
+                //define quem irá receber informações sobre a contagem da ligação.
+                if ((call.callerid1 != ramal) && (call.callerid2 != ramal)) return;
 
                 function clock() {
                   var $secondelement = $('#secondelement'),

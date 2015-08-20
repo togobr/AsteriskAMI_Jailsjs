@@ -451,8 +451,7 @@ ul, ol {
   width: 100%;
   background: #000000;
   opacity: 0.8;
-  z-index: 10;
-  display: none;
+  z-index: 9999;
 }
 /* line 204, sass/_system.scss */
 .secondScreen .lockScreen .icon-lock {
@@ -554,8 +553,9 @@ ul, ol {
   padding: 10px 3px 0px 3px;
   border-right: 1px solid #FFFFFF;
   z-index: 2;
+  overflow: hidden;
 }
-/* line 293, sass/_system.scss */
+/* line 294, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft h2 {
   text-align: center;
   color: #FFFFFF;
@@ -563,18 +563,18 @@ ul, ol {
   border-top: 1px solid #FFFFFF;
   padding-top: 4px;
 }
-/* line 301, sass/_system.scss */
+/* line 302, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv {
   height: 100%;
   overflow: auto;
 }
-/* line 305, sass/_system.scss */
+/* line 306, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user {
   position: relative;
   background: #41594A;
   height: 50px;
 }
-/* line 310, sass/_system.scss */
+/* line 311, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user.alertMessage .icon.chat:before {
   content: "!";
   position: absolute;
@@ -583,76 +583,76 @@ ul, ol {
   top: 8px;
   font-weight: bold;
 }
-/* line 320, sass/_system.scss */
+/* line 321, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user:hover {
   background: #516B5B;
 }
-/* line 324, sass/_system.scss */
+/* line 325, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul {
   display: table;
   margin-top: 5px;
   width: 100%;
   height: 100%;
 }
-/* line 330, sass/_system.scss */
+/* line 331, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li {
   color: #BCBCBC;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 336, sass/_system.scss */
+/* line 337, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.icon {
   text-align: center;
   font-size: 20px;
   cursor: pointer;
 }
-/* line 341, sass/_system.scss */
+/* line 342, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.icon i:hover {
   color: #838383;
 }
-/* line 344, sass/_system.scss */
+/* line 345, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.icon i:active {
   color: #B8B8B8;
 }
-/* line 350, sass/_system.scss */
+/* line 351, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul li.ramalNumber {
   font-weight: bold;
   color: #FFFFFF;
 }
-/* line 355, sass/_system.scss */
+/* line 356, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .ramalNumber {
   text-align: center;
   width: 60px;
 }
-/* line 360, sass/_system.scss */
+/* line 361, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .userStatus {
   text-align: center;
   font-size: 20px;
   color: #DA5656;
 }
-/* line 365, sass/_system.scss */
+/* line 366, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .userStatus.online {
   color: #75AF62;
 }
-/* line 369, sass/_system.scss */
+/* line 370, sass/_system.scss */
 .secondScreen .wrapper .wrapperLeft .usersDiv .user ul .userStatus.emUso {
   color: #FFAE00;
 }
-/* line 378, sass/_system.scss */
+/* line 379, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight {
   position: relative;
   height: 100%;
   width: 100%;
   padding-left: 210px;
 }
-/* line 384, sass/_system.scss */
+/* line 385, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper {
   position: relative;
   float: left;
   width: 80%;
   height: 100%;
 }
-/* line 390, sass/_system.scss */
+/* line 391, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatHeader {
   position: relative;
   height: 100px;
@@ -661,7 +661,7 @@ ul, ol {
   background: #293733;
   color: #FFFFFF;
 }
-/* line 399, sass/_system.scss */
+/* line 400, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView {
   position: absolute;
   height: 100%;
@@ -670,7 +670,7 @@ ul, ol {
   float: left;
   z-index: 10;
 }
-/* line 407, sass/_system.scss */
+/* line 408, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView .messages {
   border: 1px solid #000000;
   padding: 10px;
@@ -679,7 +679,7 @@ ul, ol {
   background: white;
   overflow: auto;
 }
-/* line 415, sass/_system.scss */
+/* line 416, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView .messages .message {
   position: relative;
   display: table;
@@ -689,7 +689,7 @@ ul, ol {
   border: 1px solid grey;
   background: white;
 }
-/* line 424, sass/_system.scss */
+/* line 425, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView .messages .message .ramal {
   height: 100%;
   display: table-cell;
@@ -699,7 +699,7 @@ ul, ol {
   vertical-align: middle;
   text-align: center;
 }
-/* line 434, sass/_system.scss */
+/* line 435, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView .messages .message > .text {
   display: table-cell;
   color: grey;
@@ -707,19 +707,19 @@ ul, ol {
   vertical-align: middle;
   padding-left: 10px;
 }
-/* line 444, sass/_system.scss */
+/* line 445, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView form {
   position: relative;
   height: 5%;
   width: 100%;
 }
-/* line 448, sass/_system.scss */
+/* line 449, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView form input {
   height: 100%;
   width: 100%;
   border-radius: 0px;
 }
-/* line 453, sass/_system.scss */
+/* line 454, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .chatWrapper .chatView form button {
   position: absolute;
   top: 0px;
@@ -727,7 +727,7 @@ ul, ol {
   height: 100%;
   width: 5%;
 }
-/* line 464, sass/_system.scss */
+/* line 465, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus {
   position: relative;
   float: left;
@@ -741,21 +741,21 @@ ul, ol {
   padding: 10px 10px 10px 10px;
   overflow: auto;
 }
-/* line 477, sass/_system.scss */
+/* line 478, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus h3 {
   color: #FFFFFF;
   margin-top: 20px;
 }
-/* line 480, sass/_system.scss */
+/* line 481, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus h3:first-child {
   margin-top: 0px;
 }
-/* line 485, sass/_system.scss */
+/* line 486, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus span {
   color: #FFFFFF;
   font-weight: bold;
 }
-/* line 490, sass/_system.scss */
+/* line 491, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus #divBtnCallGroup {
   position: relative;
   height: 40px;
@@ -763,7 +763,7 @@ ul, ol {
   margin: 0 auto;
   margin-top: 20px;
 }
-/* line 496, sass/_system.scss */
+/* line 497, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus #divBtnCallGroup button {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -773,7 +773,7 @@ ul, ol {
   width: 100%;
   background: green;
 }
-/* line 505, sass/_system.scss */
+/* line 506, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .blockCallStatus #btnHangUp {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -785,7 +785,7 @@ ul, ol {
   background: #BE2833;
   margin-top: 20px;
 }
-/* line 520, sass/_system.scss */
+/* line 521, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .headerLeft {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -795,14 +795,14 @@ ul, ol {
   width: 100%;
   height: 150px;
 }
-/* line 527, sass/_system.scss */
+/* line 528, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .headerLeft .localVideo {
   float: left;
   width: 280px;
   height: 100%;
   text-align: center;
 }
-/* line 532, sass/_system.scss */
+/* line 533, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .headerLeft .localVideo video {
   width: 268px;
   height: 124px;
@@ -810,7 +810,7 @@ ul, ol {
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 2s;
 }
-/* line 542, sass/_system.scss */
+/* line 543, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .remoteVideo {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -821,13 +821,13 @@ ul, ol {
   background: #FFFFFF;
   margin-top: 15px;
 }
-/* line 549, sass/_system.scss */
+/* line 550, sass/_system.scss */
 .secondScreen .wrapper .wrapperRight .remoteVideo video {
   background-color: #000000;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 2s;
 }
-/* line 560, sass/_system.scss */
+/* line 561, sass/_system.scss */
 .secondScreen .footer {
   position: absolute;
   bottom: 0px;
@@ -837,43 +837,27 @@ ul, ol {
   border-top: 5px solid #FFFFFF;
 }
 
-/* line 574, sass/_system.scss */
+/* line 575, sass/_system.scss */
 #divCallCtrl {
   display: none !important;
 }
 
 @media screen and (max-width: 480px) {
-  /* line 4, sass/_mediaQuery.scss */
+  /* line 7, sass/_mediaQuery.scss */
   .firstScreen:after, .firstScreen:before {
     content: none;
   }
-  /* line 7, sass/_mediaQuery.scss */
+  /* line 10, sass/_mediaQuery.scss */
   .firstScreen .fsLeft {
     width: 0;
   }
-  /* line 10, sass/_mediaQuery.scss */
+  /* line 13, sass/_mediaQuery.scss */
   .firstScreen .fsRight {
     width: 100%;
+    border-left: 0;
   }
 
-  /* line 17, sass/_mediaQuery.scss */
-  .secondScreen .wrapper .wrapperLeft {
-    width: 100%;
-    float: initial;
-  }
-  /* line 21, sass/_mediaQuery.scss */
-  .secondScreen .wrapper .wrapperRight {
-    padding: 0;
-  }
-  /* line 23, sass/_mediaQuery.scss */
-  .secondScreen .wrapper .wrapperRight .chatWrapper {
-    display: none;
-  }
-  /* line 26, sass/_mediaQuery.scss */
-  .secondScreen .wrapper .wrapperRight .blockCallStatus {
-    width: 100%;
-  }
-  /* line 33, sass/_mediaQuery.scss */
+  /* line 24, sass/_mediaQuery.scss */
   .secondScreen .ssHeader input#btnUnRegister {
     position: absolute;
     height: 40%;
@@ -881,24 +865,52 @@ ul, ol {
     width: 100%;
     bottom: 0;
   }
-  /* line 41, sass/_mediaQuery.scss */
+  /* line 32, sass/_mediaQuery.scss */
   .secondScreen .ssHeader .header_callStatus {
-    width: auto;
-    height: auto;
-    right: 0px;
-    margin-left: auto;
-    font-size: 20px;
-  }
-  /* line 49, sass/_mediaQuery.scss */
-  .secondScreen .ssHeader .user {
-    position: absolute;
-  }
-  /* line 51, sass/_mediaQuery.scss */
-  .secondScreen .ssHeader .user ul {
     position: relative;
-    top: auto;
+    float: left;
+    left: auto;
+    width: 60%;
+    font-size: 20px;
+    margin-left: 0;
   }
-  /* line 59, sass/_mediaQuery.scss */
+  /* line 41, sass/_mediaQuery.scss */
+  .secondScreen .ssHeader .userUl {
+    position: relative;
+    float: left;
+    top: 22px;
+    width: 40%;
+  }
+  /* line 46, sass/_mediaQuery.scss */
+  .secondScreen .ssHeader .userUl .userStatus, .secondScreen .ssHeader .userUl .ramalNumber {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  /* line 54, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperLeft {
+    width: 100%;
+    float: initial;
+  }
+  /* line 58, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight {
+    padding: 0;
+  }
+  /* line 60, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight .chatWrapper {
+    width: 100%;
+    padding: 0;
+  }
+  /* line 63, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight .chatWrapper .chatView form button {
+    width: 20%;
+  }
+  /* line 67, sass/_mediaQuery.scss */
+  .secondScreen .wrapper .wrapperRight .blockCallStatus {
+    position: absolute;
+    width: 100%;
+    border: 0px;
+  }
+  /* line 75, sass/_mediaQuery.scss */
   .secondScreen .footer {
     display: none;
   }
